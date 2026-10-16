@@ -1,11 +1,3 @@
-/**
- * Lógica para la Página de Inicio (US-01)
- * Cumple con:
- * - Menú hamburguesa interactivo
- * - Código estructurado y comentado
- * - Persistencia de navegación con localStorage
- * - Consola limpia sin errores ni advertencias
- */
 
 document.addEventListener('DOMContentLoaded', () => {
     // Declaración limpia de elementos del DOM

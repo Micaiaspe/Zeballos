@@ -1,6 +1,4 @@
-/**
- * Lógica Universal del Menú Lateral para TODAS las páginas
- */
+
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('menu-toggle');
     const menuClose = document.getElementById('menu-close');
