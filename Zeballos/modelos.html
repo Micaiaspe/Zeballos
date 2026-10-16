@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelos Tradicionales - SGCS</title>
+    <!-- CSS Modular: Base y Tradicionales compartidos -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tradicionales.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="navbar-logo">
+            <span class="logo-icon"></span>
+            <span class="logo-title">Calidad de Software</span>
+        </div>
+        <button id="menu-toggle" class="menu-toggle-btn" aria-label="Abrir menú">☰</button>
+    </header>
+
+    <!-- Menú Lateral -->
+    <aside id="sidebar-menu" class="sidebar">
+        <div class="sidebar-header">
+            <h3>Navegación</h3>
+            <button id="menu-close" class="close-btn" aria-label="Cerrar menú">&times;</button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul class="menu-list">
+                <!-- 01 INICIO -->
+                <li class="menu-item">
+                    <a href="index.html" class="menu-link">
+                        <span class="num">01</span>
+                        <span class="text">Inicio</span>
+                    </a>
+                </li>
+
+                <!-- 02 HISTORIAS DE USUARIO -->
+                <li class="menu-item has-sub">
+                    <div class="menu-link-group">
+                        <a href="tecnicas.html" class="menu-link">
+                            <span class="num">02</span>
+                            <span class="text">Historias de usuario</span>
+                        </a>
+                        <span class="arrow">⌃</span>
+                    </div>
+
+                    <ul class="sub-menu level-1">
+                        <li><a href="fundamentos.html" class="sub-link">Fundamentos de Calidad</a></li>
+                        <li><a href="tecnicas.html" class="sub-link">Técnicas de Aseguramiento</a></li>
+                    </ul>
+                </li>
+
+                <!-- 03 SDLC -->
+                <li class="menu-item">
+                    <a href="sdlc.html" class="menu-link">
+                        <span class="num">03</span>
+                        <span class="text">Ciclo SDLC</span>
+                    </a>
+                </li>
+
+                <!-- 04 MODELOS DE DESARROLLO -->
+                <li class="menu-item has-sub open">
+                    <div class="menu-link-group">
+                        <a href="modelos.html" class="menu-link active">
+                            <span class="num">04</span>
+                            <span class="text">Modelos de Desarrollo</span>
+                        </a>
+                        <span class="arrow">⌃</span>
+                    </div>
+
+                    <ul class="sub-menu level-1">
+                        <li><a href="tradicionales.html" class="sub-link">Modelos Tradicionales</a></li>
+                        <li><a href="agiles.html" class="sub-link">Metodologías Ágiles</a></li>
+                    </ul>
+                </li>
+
+                <!-- 05 HERRAMIENTAS DE CALIDAD -->
+                <li class="menu-item">
+                    <a href="herramientas.html" class="menu-link">
+                        <span class="num">05</span>
+                        <span class="text">Herramientas de Calidad</span>
+                    </a>
+                </li>
+
+                <!-- 06 NOSOTROS -->
+                <li class="menu-item">
+                    <a href="nosotros.html" class="menu-link">
+                        <span class="num">06</span>
+                        <span class="text">Nosotros</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+    <!-- Contenido Principal -->
+    <main class="main-container">
+        <section class="hero-card">
+            <h1 class="hero-title">Modelos Tradicionales de Desarrollo</h1>
+            <p class="hero-description">
+                Compara los enfoques tradicionales de ciclo de vida del software, sus metodologías, ventajas, desventajas y casos de uso recomendados.
+            </p>
+
+            <!-- Pestañas Horizontales -->
+            <div class="modelos-tabs-nav" role="tablist">
+                <button class="tab-btn active" data-target="cascada" role="tab" aria-selected="true">
+                    Modelo en Cascada
+                </button>
+                <button class="tab-btn" data-target="modelo-v" role="tab" aria-selected="false">
+                    Modelo en V
+                </button>
+                <button class="tab-btn" data-target="iterativo" role="tab" aria-selected="false">
+                    Iterativo e Incremental
+                </button>
+            </div>
+
+            <!-- CASCADA -->
+            <div id="cascada" class="tab-content active">
+                <h2 class="sub-section-title">Modelo en Cascada (Waterfall)</h2>
+                <p class="model-intro">
+                    Enfoque secuencial donde cada fase debe completarse strictly antes de comenzar la siguiente (Requisitos → Diseño → Implementación → Verificación → Mantenimiento).
+                </p>
+
+                <div class="comparativo-grid">
+                    <div class="box-comparativa box-ventajas">
+                        <h3>Ventajas</h3>
+                        <ul>
+                            <li>Estructura clara y fases bien definidas fáciles de entender.</li>
+                            <li>Documentación rigurosa en cada etapa del desarrollo.</li>
+                            <li>Ideal para equipos con poca experiencia o proyectos estables.</li>
+                        </ul>
+                    </div>
+
+                    <div class="box-comparativa box-desventajas">
+                        <h3>Desventajas</h3>
+                        <ul>
+                            <li>Alta inflexibilidad ante cambios de requisitos en etapas avanzadas.</li>
+                            <li>El cliente no ve software funcional hasta el final del proyecto.</li>
+                            <li>Las pruebas se realizan tarde, lo que encarece la corrección de errores.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="box-uso">
+                    <h3> ¿Cuándo utilizarlo?</h3>
+                    <p>Cuando los requisitos están 100% definidos y estables, la tecnología es conocida y el proyecto no sufrirá variaciones durante el ciclo de desarrollo.</p>
+                </div>
+            </div>
+
+            <!-- MODELO EN V -->
+            <div id="modelo-v" class="tab-content">
+                <h2 class="sub-section-title">Modelo en V (V-Model)</h2>
+                <p class="model-intro">
+                    Extensión del modelo en cascada que asocia directamente cada fase de desarrollo con su correspondiente nivel de prueba de aseguramiento de calidad.
+                </p>
+
+                <div class="comparativo-grid">
+                    <div class="box-comparativa box-ventajas">
+                        <h3>Ventajas</h3>
+                        <ul>
+                            <li>Planificación de pruebas desde las primeras fases de diseño.</li>
+                            <li>Alta tasa de detección temprana de defectos y fallos de lógica.</li>
+                            <li>Asegura un control de calidad riguroso en cada entregable.</li>
+                        </ul>
+                    </div>
+
+                    <div class="box-comparativa box-desventajas">
+                        <h3>Desventajas</h3>
+                        <ul>
+                            <li>Mantiene la rigidez frente a cambios inesperados de requisitos.</li>
+                            <li>Requiere un esfuerzo documental considerable desde el inicio.</li>
+                            <li>No genera prototipos funcionales intermedios tempranos.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="box-uso">
+                    <h3> ¿Cuándo utilizarlo?</h3>
+                    <p>En proyectos críticos donde la calidad, fiabilidad y seguridad son prioritarias (sistemas médicos, bancarios, aeronáuticos o industriales).</p>
+                </div>
+            </div>
+
+            <!-- ITERATIVO E INCREMENTAL -->
+            <div id="iterativo" class="tab-content">
+                <h2 class="sub-section-title">Modelo Iterativo e Incremental</h2>
+                <p class="model-intro">
+                    Descompone el proyecto en bloques pequeños (incrementos). En cada iteración se analiza, diseña, programa y prueba un subconjunto del sistema funcional.
+                </p>
+
+                <div class="comparativo-grid">
+                    <div class="box-comparativa box-ventajas">
+                        <h3>Ventajas</h3>
+                        <ul>
+                            <li>Entrega de versiones funcionales tempranas al usuario.</li>
+                            <li>Permite incorporar cambios y retroalimentación en cada iteración.</li>
+                            <li>Mitiga riesgos al validar funcionalidades de forma progresiva.</li>
+                        </ul>
+                    </div>
+
+                    <div class="box-comparativa box-desventajas">
+                        <h3>Desventajas</h3>
+                        <ul>
+                            <li>Requiere una gestión y arquitectura inicial muy sólidas.</li>
+                            <li>Dificultad para estimar el costo total final del proyecto.</li>
+                            <li>Riesgo de degradar la arquitectura si no se refactoriza bien.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="box-uso">
+                    <h3> ¿Cuándo utilizarlo?</h3>
+                    <p>En proyectos de gran escala con requisitos propensos a evolucionar o donde sea necesario lanzar un producto funcional al mercado rápidamente.</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="footer-site">
+        <div class="footer-simple-container">
+            <p class="footer-contact"><span class="contact-icon"></span> Contacto: <strong>@Extasiscalidad</strong></p>
+            <span class="footer-separator">•</span>
+            <p class="footer-location"><span class="location-icon"></span> Neuquén, Argentina</p>
+        </div>
+    </footer>
+
+    <script src="menu.js"></script>
+    <script src="modelos.js"></script>
+</body>
+</html>

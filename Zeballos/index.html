@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Sistemas de Gestión de Calidad</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Encabezado / Barra de menú -->
+    <header class="navbar">
+        <div class="navbar-logo">
+            <span class="logo-icon"></span>
+            <span class="logo-title">Calidad de Software</span>
+        </div>
+        <!-- Botón Menú Hamburguesa -->
+        <button id="menu-toggle" class="menu-toggle-btn" aria-label="Abrir menú de navegación">
+            <span class="hamburger-icon">☰</span>
+        </button>
+    </header>
+
+<!-- Menú Lateral -->
+<aside id="sidebar-menu" class="sidebar">
+    <div class="sidebar-header">
+        <h3>Navegación</h3>
+        <button id="menu-close" class="close-btn" aria-label="Cerrar menú">&times;</button>
+    </div>
+
+    <nav class="sidebar-nav">
+        <ul class="menu-list">
+            <!-- 01 INICIO -->
+            <li class="menu-item">
+                <a href="index.html" class="menu-link">
+                    <span class="num">01</span>
+                    <span class="text">Inicio</span>
+                </a>
+            </li>
+
+            <!-- 02 HISTORIAS DE USUARIO -->
+            <li class="menu-item has-sub">
+                <div class="menu-link-group">
+                    <a href="tecnicas.html" class="menu-link">
+                        <span class="num">02</span>
+                        <span class="text">Historias de usuario</span>
+                    </a>
+                    <span class="arrow">⌃</span>
+                </div>
+
+                <ul class="sub-menu level-1">
+                    <li><a href="fundamentos.html" class="sub-link">Fundamentos de Calidad</a></li>
+                    <li><a href="tecnicas.html" class="sub-link">Técnicas de Aseguramiento</a></li>
+                </ul>
+            </li>
+
+            <!-- 03 SDLC -->
+            <li class="menu-item">
+                <a href="sdlc.html" class="menu-link">
+                    <span class="num">03</span>
+                    <span class="text">Ciclo SDLC</span>
+                </a>
+            </li>
+
+            <!-- 04 MODELOS DE DESARROLLO -->
+            <li class="menu-item has-sub">
+                <div class="menu-link-group">
+                    <a href="modelos.html" class="menu-link">
+                        <span class="num">04</span>
+                        <span class="text">Modelos de Desarrollo</span>
+                    </a>
+                    <span class="arrow">⌃</span>
+                </div>
+
+                <ul class="sub-menu level-1">
+                    <li><a href="tradicionales.html" class="sub-link">Modelos Tradicionales</a></li>
+                    <li><a href="agiles.html" class="sub-link">Metodologías Ágiles</a></li>
+                </ul>
+            </li>
+
+            <!-- 05 HERRAMIENTAS DE CALIDAD -->
+            <li class="menu-item">
+                <a href="herramientas.html" class="menu-link">
+                    <span class="num">05</span>
+                    <span class="text">Herramientas de Calidad</span>
+                </a>
+            </li>
+
+            <!-- 06 NOSOTROS -->
+            <li class="menu-item">
+                <a href="nosotros.html" class="menu-link">
+                    <span class="num">06</span>
+                    <span class="text">Nosotros</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</aside>
+
+<div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+    <!-- Fondo Oscuro Overlay para cerrar el menú en móvil -->
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+    <!-- Contenido Principal (Hero & Tarjetas) -->
+    <main class="main-container">
+    <section class="index-hero">
+        <div class="hero-left">
+            <h1>Sistemas de Gestión de Calidad</h1>
+            <p>El sitio web está dedicado a la educación y difusión de conocimientos fundamentales sobre la gestión de la calidad del software...</p>
+            <a href="fundamentos.html" class="btn-primary">Explorar contenidos ↘</a>
+        </div>
+
+        <div class="hero-right-box">
+            <span class="box-title">Calidad de Software</span>
+            <div class="sub-cards-container">
+                <a href="fundamentos.html" class="sub-card">
+                    <h3>Gestión de la Calidad del Software</h3>
+                    <p>Conceptos y actividades</p>
+                </a>
+                <a href="sdlc.html" class="sub-card">
+                    <h3>Procesos de Desarrollo de Software</h3>
+                    <p>Modelos y ciclos</p>
+                </a>
+                <a href="agiles.html" class="sub-card">
+                    <h3>Metodologías Ágiles</h3>
+                    <p>Herramientas de trabajo</p>
+                </a>
+                <a href="tecnicas.html" class="sub-card">
+                    <h3>Procesos y Estándares</h3>
+                    <p>Definiciones de términos clave</p>
+                </a>
+                <a href="nosotros.html" class="sub-card">
+                    <h3>Sobre Nosotros</h3>
+                    <p>Información sobre el equipo</p>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+    <!-- Pie de Página Simple y Elegante -->
+<footer class="footer-site">
+    <div class="footer-simple-container">
+        <p class="footer-contact">
+            <span class="contact-icon"></span> Contacto: <strong>@Extasiscalidad</strong>
+        </p>
+        <span class="footer-separator">•</span>
+        <p class="footer-location">
+            <span class="location-icon"></span> Neuquén, Argentina
+        </p>
+    </div>
+</footer>
+    <script src="inicio.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+/* ===================================================
+   ESTILOS EXCLUSIVOS: METODOLOGÍAS ÁGILES (ESTILO FIGMA)
+   =================================================== */
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+.hero-description {
+    font-size: 1.05rem;
+    color: #1e293b;
+    font-weight: 500;
+    max-width: 850px;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* Menú de navegación en pastillas */
+.agile-pills-nav {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.pill-nav-btn {
+    background-color: #231f33;
+    color: #ffffff;
+    padding: 8px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.2s ease;
+}
+
+.pill-nav-btn:hover {
+    background-color: #685383;
+    border-color: #b095e6;
+    transform: translateY(-2px);
+}
+
+/* Tarjetas principales de secciones */
+.agile-card {
+    background-color: #231f33;
+    border-radius: 18px;
+    padding: 28px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.agile-card .card-badge {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #b095e6;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.agile-card h2 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.agile-card p {
+    color: #f1f5f9;
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+
+.card-subtitle {
+    color: #d1c4e9;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+/* Lista numerada de Valores Ágiles */
+.valores-list {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.valores-list li {
+    color: #f1f5f9;
+    font-size: 0.98rem;
+    line-height: 1.5;
+}
+
+.valores-list strong {
+    color: #2ecc71;
+}
+
+/* Listas con viñetas */
+.agile-bullet-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.agile-bullet-list li {
+    position: relative;
+    padding-left: 22px;
+    color: #f1f5f9;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.agile-bullet-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #b095e6;
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+.agile-bullet-list strong {
+    color: #ffffff;
+}
+
+/* Grilla para sub-elementos (Roles y Prácticas) */
+.grid-subcards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-top: 15px;
+}
+
+.sub-item-card {
+    background-color: #1a1626;
+    padding: 18px;
+    border-radius: 12px;
+    border-left: 4px solid #b095e6;
+}
+
+.sub-item-card h3 {
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.sub-item-card p {
+    color: #d1c4e9;
+    font-size: 0.88rem;
+    line-height: 1.5;
+}

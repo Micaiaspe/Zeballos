@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos de Calidad - SGCS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="fundamentos.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="navbar-logo">
+            <span class="logo-icon"></span>
+            <span class="logo-title">Calidad de Software</span>
+        </div>
+        <button id="menu-toggle" class="menu-toggle-btn" aria-label="Abrir menú">☰</button>
+    </header>
+
+    <!-- Menú Lateral -->
+    <aside id="sidebar-menu" class="sidebar">
+        <div class="sidebar-header">
+            <h3>Navegación</h3>
+            <button id="menu-close" class="close-btn" aria-label="Cerrar menú">&times;</button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul class="menu-list">
+                <!-- 01 INICIO -->
+                <li class="menu-item">
+                    <a href="index.html" class="menu-link">
+                        <span class="num">01</span>
+                        <span class="text">Inicio</span>
+                    </a>
+                </li>
+
+                <!-- 02 HISTORIAS DE USUARIO -->
+                <li class="menu-item has-sub open">
+                    <div class="menu-link-group">
+                        <a href="tecnicas.html" class="menu-link active">
+                            <span class="num">02</span>
+                            <span class="text">Historias de usuario</span>
+                        </a>
+                        <span class="arrow">⌃</span>
+                    </div>
+
+                    <ul class="sub-menu level-1">
+                        <li><a href="fundamentos.html" class="sub-link active">Fundamentos de Calidad</a></li>
+                        <li><a href="tecnicas.html" class="sub-link">Técnicas de Aseguramiento</a></li>
+                    </ul>
+                </li>
+
+                <!-- 03 SDLC -->
+                <li class="menu-item">
+                    <a href="sdlc.html" class="menu-link">
+                        <span class="num">03</span>
+                        <span class="text">Ciclo SDLC</span>
+                    </a>
+                </li>
+
+                <!-- 04 MODELOS DE DESARROLLO -->
+                <li class="menu-item has-sub">
+                    <div class="menu-link-group">
+                        <a href="modelos.html" class="menu-link">
+                            <span class="num">04</span>
+                            <span class="text">Modelos de Desarrollo</span>
+                        </a>
+                        <span class="arrow">⌃</span>
+                    </div>
+
+                    <ul class="sub-menu level-1">
+                        <li><a href="tradicionales.html" class="sub-link">Modelos Tradicionales</a></li>
+                        <li><a href="agiles.html" class="sub-link">Metodologías Ágiles</a></li>
+                    </ul>
+                </li>
+
+                <!-- 05 HERRAMIENTAS DE CALIDAD -->
+                <li class="menu-item">
+                    <a href="herramientas.html" class="menu-link">
+                        <span class="num">05</span>
+                        <span class="text">Herramientas de Calidad</span>
+                    </a>
+                </li>
+
+                <!-- 06 NOSOTROS -->
+                <li class="menu-item">
+                    <a href="nosotros.html" class="menu-link">
+                        <span class="num">06</span>
+                        <span class="text">Nosotros</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+    <!-- Contenido Principal: Réplica exacta del Figma -->
+    <main class="main-container">
+        <section class="hero-card" style="display: block;">
+            
+            <!-- Encabezado Principal -->
+            <h1 class="hero-title" style="font-size: 3.2rem; margin-bottom: 12px; color: #111827;">Fundamentos de Calidad</h1>
+            <p class="hero-description" style="max-width: 800px; margin-bottom: 35px; color: #1f2937;">
+                Antes de medir o controlar la calidad, primero hay que entender qué se está evaluando. Este bloque introduce conceptos, métricas y estándares de referencia.
+            </p>
+
+            <!-- Grilla de 2 Columnas idéntica a Figma -->
+            <div class="fundamentos-grid">
+                
+                <!-- Tarjeta Izquierda: Calidad del Software -->
+                <div class="fundamentos-card">
+                    <span class="card-badge">IDEA CENTRAL</span>
+                    <h2 class="card-title">Calidad del software</h2>
+                    <p id="left-card-desc" class="card-text">
+                        La calidad no debe verse como un adorno al final del desarrollo. Comienza desde los requerimientos y continúa durante todo el ciclo del producto.
+                    </p>
+
+                    <!-- Botones Pastilla en la parte inferior -->
+                    <div class="pill-group" style="margin-top: auto; padding-top: 25px;">
+                        <button class="pill-btn active" data-left="concepto">Concepto</button>
+                        <button class="pill-btn" data-left="metricas">Métricas</button>
+                        <button class="pill-btn" data-left="estandares">Estándares</button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Derecha: Estándares ISO -->
+                <div class="fundamentos-card">
+                    
+                    <!-- Botones Pastilla en la parte superior -->
+                    <div class="pill-group" style="margin-bottom: 20px;">
+                        <button class="pill-btn active" data-iso="iso9126">ISO 9126</button>
+                        <button class="pill-btn" data-iso="iso10006">ISO 10006</button>
+                    </div>
+
+                    <h2 id="iso-title" class="card-title">ISO 9126</h2>
+                    <p id="iso-subtitle" class="card-text">
+                        Estándar de referencia para evaluar atributos y características vinculadas a la calidad del producto de software.
+                    </p>
+
+                    <!-- Lista con Checkmarks -->
+                    <ul id="iso-checklist" class="check-list">
+                        <li>
+                            <span class="check-badge">✓</span>
+                            <span>Funcionalidad del producto</span>
+                        </li>
+                        <li>
+                            <span class="check-badge">✓</span>
+                            <span>Fiabilidad y comportamiento</span>
+                        </li>
+                        <li>
+                            <span class="check-badge">✓</span>
+                            <span>Facilidad de mantenimiento</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="footer-site">
+        <div class="footer-simple-container">
+            <p class="footer-contact"><span class="contact-icon"></span> Contacto: <strong>@Extasiscalidad</strong></p>
+            <span class="footer-separator">•</span>
+            <p class="footer-location"><span class="location-icon"></span> Neuquén, Argentina</p>
+        </div>
+    </footer>
+
+    <script src="menu.js"></script>
+    <script src="fundamentos.js"></script>
+</body>
+</html>

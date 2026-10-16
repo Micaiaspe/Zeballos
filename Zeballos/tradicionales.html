@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelos Tradicionales - SGCS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tradicionales.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="navbar-logo">
+            <span class="logo-icon"></span>
+            <span class="logo-title">Calidad de Software</span>
+        </div>
+        <button id="menu-toggle" class="menu-toggle-btn" aria-label="Abrir menú">☰</button>
+    </header>
+
+    <!-- Menú Lateral -->
+    <aside id="sidebar-menu" class="sidebar">
+        <div class="sidebar-header">
+            <h3>Navegación</h3>
+            <button id="menu-close" class="close-btn" aria-label="Cerrar menú">&times;</button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul class="menu-list">
+                <li class="menu-item">
+                    <a href="index.html" class="menu-link">
+                        <span class="num">01</span>
+                        <span class="text">Inicio</span>
+                    </a>
+                </li>
+                <li class="menu-item has-sub">
+                    <div class="menu-link-group">
+                        <a href="tecnicas.html" class="menu-link">
+                            <span class="num">02</span>
+                            <span class="text">Historias de usuario</span>
+                        </a>
+                        <span class="arrow">⌃</span>
+                    </div>
+
+                    <ul class="sub-menu level-1">
+                        <li><a href="fundamentos.html" class="sub-link">Fundamentos de Calidad</a></li>
+                        <li><a href="tecnicas.html" class="sub-link">Técnicas de Aseguramiento</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="sdlc.html" class="menu-link">
+                        <span class="num">03</span>
+                        <span class="text">Ciclo SDLC</span>
+                    </a>
+                </li>
+                <li class="menu-item has-sub open">
+                    <div class="menu-link-group">
+                        <a href="modelos.html" class="menu-link active">
+                            <span class="num">04</span>
+                            <span class="text">Modelos de Desarrollo</span>
+                        </a>
+                        <span class="arrow">⌃</span>
+                    </div>
+
+                    <ul class="sub-menu level-1">
+                        <li><a href="tradicionales.html" class="sub-link active">Modelos Tradicionales</a></li>
+                        <li><a href="agiles.html" class="sub-link">Metodologías Ágiles</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="herramientas.html" class="menu-link">
+                        <span class="num">05</span>
+                        <span class="text">Herramientas de Calidad</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="nosotros.html" class="menu-link">
+                        <span class="num">06</span>
+                        <span class="text">Nosotros</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+    <!-- Contenido Principal Estilo Figma -->
+    <main class="main-container">
+        <section class="hero-card" style="display: block;">
+            
+            <h1 class="hero-title" style="font-size: 3.2rem; margin-bottom: 12px;;">Modelos Tradicionales de Desarrollo</h1>
+            <p class="hero-description" style="max-width: 850px; margin-bottom: 30px;">
+                Compara los enfoques tradicionales de ciclo de vida del software (gestión predictiva e ingeniería secuencial), sus ventajas, desventajas y casos de uso recomendados.
+            </p>
+
+            <!-- Pestañas horizontales tipo pastilla -->
+            <div class="modelos-tabs-nav" role="tablist">
+                <button class="tab-btn active" data-tab="cascada" role="tab" aria-selected="true">
+                    Modelo en Cascada
+                </button>
+                <button class="tab-btn" data-tab="modelov" role="tab" aria-selected="false">
+                    Modelo en V
+                </button>
+                <button class="tab-btn" data-tab="iterativo" role="tab" aria-selected="false">
+                    Iterativo e Incremental
+                </button>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid rgba(255, 255, 255, 0.2); margin: 25px 0;">
+
+            <!-- 1. Modelo en Cascada -->
+            <div id="cascada" class="tab-content active">
+                <h2 style="font-size: 2.2rem; margin-bottom: 10px;">Modelo en Cascada (Waterfall)</h2>
+                <p style="font-size: 1.05rem; margin-bottom: 25px; line-height: 1.6;">
+                    Enfoque secuencial derivado de la ingeniería industrial donde cada fase debe completarse estrictamente antes de comenzar la siguiente (Requisitos → Análisis → Diseño → Codificación → Pruebas → Mantenimiento).
+                </p>
+                
+                <div class="comparativo-grid">
+                    <div class="box-comparativa box-ventajas">
+                        <h3>Ventajas</h3>
+                        <ul>
+                            <li>Estructura clara y fases secuenciales bien definidas.</li>
+                            <li>Documentación exhaustiva en cada etapa de la ingeniería.</li>
+                            <li>Fácil de administrar cuando los requisitos son 100% estables.</li>
+                        </ul>
+                    </div>
+                    <div class="box-comparativa box-desventajas">
+                        <h3>Desventajas</h3>
+                        <ul>
+                            <li>Alta inflexibilidad ante cambios o imprevistos a mitad del desarrollo.</li>
+                            <li>El cliente no ve un producto operativo hasta el final de la ejecución.</li>
+                            <li>Las pruebas se realizan tarde, encareciendo la corrección de fallas.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="box-uso">
+                    <h3>💡 ¿Cuándo utilizarlo?</h3>
+                    <p>En proyectos con requisitos completamente definidos e inmodificables, tecnología madura y conocida, donde el costo de planificación predictiva inicial esté justificado.</p>
+                </div>
+            </div>
+
+            <!-- 2. Modelo en V -->
+            <div id="modelov" class="tab-content">
+                <h2 style="font-size: 2.2rem; margin-bottom: 10px;">Modelo en V (V-Model)</h2>
+                <p style="font-size: 1.05rem; margin-bottom: 25px; line-height: 1.6;">
+                    Extensión del modelo en cascada que asocia directamente cada etapa del desarrollo con su correspondiente nivel de prueba de aseguramiento de calidad (QA) desde el inicio.
+                </p>
+
+                <div class="comparativo-grid">
+                    <div class="box-comparativa box-ventajas">
+                        <h3>Ventajas</h3>
+                        <ul>
+                            <li>Planificación temprana de pruebas en paralelo a la definición de requisitos.</li>
+                            <li>Mayor probabilidad de detectar errores de diseño y lógica antes de la codificación.</li>
+                            <li>Control y seguimiento riguroso de la calidad en cada entregable.</li>
+                        </ul>
+                    </div>
+                    <div class="box-comparativa box-desventajas">
+                        <h3>Desventajas</h3>
+                        <ul>
+                            <li>Mantiene la rigidez frente a cambios inesperados de alcance.</li>
+                            <li>Costo elevado de mantenimiento y actualización de documentación.</li>
+                            <li>No genera prototipos funcionales intermedios tempranos para el usuario.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="box-uso">
+                    <h3>💡 ¿Cuándo utilizarlo?</h3>
+                    <p>En sistemas donde la fiabilidad, seguridad y documentación técnica son críticas, como aplicaciones bancarias, médicas o industriales.</p>
+                </div>
+            </div>
+
+            <!-- 3. Iterativo e Incremental -->
+            <div id="iterativo" class="tab-content">
+                <h2 style="font-size: 2.2rem; margin-bottom: 10px;">Modelo Iterativo e Incremental</h2>
+                <p style="font-size: 1.05rem; margin-bottom: 25px; line-height: 1.6;">
+                    Estrategia que descompone el desarrollo en bloques parciales (incrementos), permitiendo evaluar y refinar el producto mediante entregas progresivas.
+                </p>
+
+                <div class="comparativo-grid">
+                    <div class="box-comparativa box-ventajas">
+                        <h3>Ventajas</h3>
+                        <ul>
+                            <li>Entrega de versiones funcionales tempranas al cliente.</li>
+                            <li>Mayor capacidad de adaptación ante cambios de requisitos.</li>
+                            <li>Reducción del riesgo al validar componentes en cada iteración.</li>
+                        </ul>
+                    </div>
+                    <div class="box-comparativa box-desventajas">
+                        <h3>Desventajas</h3>
+                        <ul>
+                            <li>Requiere una arquitectura base sólida desde la primera versión.</li>
+                            <li>Dificultad para estimar el costo total final del proyecto sin alcance cerrado.</li>
+                            <li>Riesgo de degradación de la estructura si se agregan módulos sin refactorizar.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="box-uso">
+                    <h3>💡 ¿Cuándo utilizarlo?</h3>
+                    <p>En proyectos de alta complejidad o innovación donde los requisitos evolucionan según el comportamiento del mercado o retroalimentación del cliente.</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="footer-site">
+        <div class="footer-simple-container">
+            <p class="footer-contact"><span class="contact-icon"></span> Contacto: <strong>@Extasiscalidad</strong></p>
+            <span class="footer-separator">•</span>
+            <p class="footer-location"><span class="location-icon"></span> Neuquén, Argentina</p>
+        </div>
+    </footer>
+
+    <script src="tradicionales.js"></script>
+    <script src="menu.js"></script>
+</body>
+</html>

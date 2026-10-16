@@ -1,0 +1,115 @@
+/* ===================================================
+   ESTILOS EXCLUSIVOS: FUNDAMENTOS DE CALIDAD
+   =================================================== */
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+.hero-description {
+    font-size: 1.05rem;
+    color: #1e293b;
+    font-weight: 500;
+    max-width: 800px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.fundamentos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.fundamentos-card {
+    background-color: #685383;
+    border-radius: 18px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 360px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card-badge {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: #e2d8f5;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #f1f5f9;
+    margin-bottom: 20px;
+}
+
+.pill-group {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+
+.pill-btn {
+    background-color: #231b31;
+    color: #ffffff;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.pill-btn:hover, .pill-btn.active {
+    background-color: #120d1c;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+.check-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.check-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+.check-badge {
+    width: 22px;
+    height: 22px;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+@media (max-width: 800px) {
+    .fundamentos-grid { grid-template-columns: 1fr; }
+}

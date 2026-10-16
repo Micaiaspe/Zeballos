@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herramientas de Calidad - SGCS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="herramientas.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="navbar-logo">
+            <span class="logo-icon"></span>
+            <span class="logo-title">Calidad de Software</span>
+        </div>
+        <button id="menu-toggle" class="menu-toggle-btn" aria-label="Abrir menú">☰</button>
+    </header>
+
+    <!-- Menú Lateral -->
+    <aside id="sidebar-menu" class="sidebar">
+        <div class="sidebar-header">
+            <h3>Navegación</h3>
+            <button id="menu-close" class="close-btn" aria-label="Cerrar menú">&times;</button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul class="menu-list">
+                <li class="menu-item">
+                    <a href="index.html" class="menu-link">
+                        <span class="num">01</span>
+                        <span class="text">Inicio</span>
+                    </a>
+                </li>
+                <li class="menu-item has-sub">
+                    <div class="menu-link-group">
+                        <a href="tecnicas.html" class="menu-link">
+                            <span class="num">02</span>
+                            <span class="text">Historias de usuario</span>
+                        </a>
+                        <span class="arrow">⌃</span>
+                    </div>
+
+                    <ul class="sub-menu level-1">
+                        <li><a href="fundamentos.html" class="sub-link">Fundamentos de Calidad</a></li>
+                        <li><a href="tecnicas.html" class="sub-link">Técnicas de Aseguramiento</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="sdlc.html" class="menu-link">
+                        <span class="num">03</span>
+                        <span class="text">Ciclo SDLC</span>
+                    </a>
+                </li>
+                <li class="menu-item has-sub">
+                    <div class="menu-link-group">
+                        <a href="modelos.html" class="menu-link">
+                            <span class="num">04</span>
+                            <span class="text">Modelos de Desarrollo</span>
+                        </a>
+                        <span class="arrow">⌃</span>
+                    </div>
+
+                    <ul class="sub-menu level-1">
+                        <li><a href="tradicionales.html" class="sub-link">Modelos Tradicionales</a></li>
+                        <li><a href="agiles.html" class="sub-link">Metodologías Ágiles</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="herramientas.html" class="menu-link active">
+                        <span class="num">05</span>
+                        <span class="text">Herramientas de Calidad</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="nosotros.html" class="menu-link">
+                        <span class="num">06</span>
+                        <span class="text">Nosotros</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+    <!-- Contenido Principal -->
+    <main class="main-container">
+        <section class="hero-card">
+            
+            <h1 class="hero-title">Herramientas de Calidad</h1>
+            <p class="hero-description">
+                Herramientas para registrar, analizar y controlar la calidad del software. Selecciona una categoría para filtrar.
+            </p>
+
+            <!-- Botones Pastilla para Filtrar -->
+            <div class="filter-pills">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="bug-trackers">Bug trackers</button>
+                <button class="filter-btn" data-filter="linters">Linters</button>
+                <button class="filter-btn" data-filter="test-management">Test management</button>
+            </div>
+
+            <!-- Grilla de Tarjetas -->
+            <div class="tools-grid">
+                
+                <!-- Tarjeta 1 -->
+                <div class="tool-card" data-category="test-management">
+                    <div>
+                        <span class="tool-category">TEST MANAGEMENT</span>
+                        <h2 class="tool-name">Gestión de pruebas</h2>
+                        <p class="tool-desc">Organización de casos de prueba, resultados y evidencias para el equipo de QA.</p>
+                    </div>
+                    <span class="tool-tag">Casos · Resultados · Evidencias</span>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="tool-card" data-category="bug-trackers">
+                    <div>
+                        <span class="tool-category">BUG TRACKERS</span>
+                        <h2 class="tool-name">Jira / Bugzilla</h2>
+                        <p class="tool-desc">Registro, asignación, seguimiento y trazabilidad de incidencias y defectos.</p>
+                    </div>
+                    <span class="tool-tag">Gestión de Incidencias</span>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="tool-card" data-category="linters">
+                    <div>
+                        <span class="tool-category">LINTERS</span>
+                        <h2 class="tool-name">SonarQube / ESLint</h2>
+                        <p class="tool-desc">Análisis estático de código para detectar errores de sintaxis, vulnerabilidades y deuda técnica.</p>
+                    </div>
+                    <span class="tool-tag">Análisis Estático</span>
+                </div>
+
+                <!-- Tarjeta 4 -->
+                <div class="tool-card" data-category="test-management">
+                    <div>
+                        <span class="tool-category">TEST MANAGEMENT</span>
+                        <h2 class="tool-name">TestRail / Zephyr</h2>
+                        <p class="tool-desc">Gestión centralizada de ejecuciones de pruebas y métricas de cobertura.</p>
+                    </div>
+                    <span class="tool-tag">Métricas QA</span>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="footer-site">
+        <div class="footer-simple-container">
+            <p class="footer-contact"><span class="contact-icon"></span> Contacto: <strong>@Extasiscalidad</strong></p>
+            <span class="footer-separator">•</span>
+            <p class="footer-location"><span class="location-icon"></span> Neuquén, Argentina</p>
+        </div>
+    </footer>
+
+    <script src="menu.js"></script>
+    <script src="herramientas.js"></script>
+</body>
+</html>

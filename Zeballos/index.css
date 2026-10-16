@@ -1,0 +1,105 @@
+/* ===================================================
+   ESTILOS EXCLUSIVOS: INICIO (INDEX.HTML)
+   =================================================== */
+
+.index-hero {
+    background-color: var(--color-card-bg);
+    border-radius: 24px;
+    width: 100%;
+    max-width: 1100px;
+    padding: 45px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.index-hero h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.index-hero p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #f0eafb;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #1a1726;
+    color: #ffffff;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #2b263e;
+    transform: translateY(-2px);
+}
+
+.hero-right-box {
+    background-color: var(--color-inner-box);
+    border-radius: 18px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.box-title {
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.sub-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sub-card {
+    background-color: var(--color-card-dark);
+    padding: 14px 18px;
+    border-radius: 12px;
+    text-decoration: none !important;
+    color: #ffffff !important;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.sub-card:hover {
+    transform: translateX(4px);
+    background-color: #2e2942;
+}
+
+.sub-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 2px;
+}
+
+.sub-card p {
+    font-size: 0.82rem;
+    color: #d1c4e9;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .index-hero {
+        grid-template-columns: 1fr;
+        padding: 25px;
+    }
+}

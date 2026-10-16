@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Técnicas de Aseguramiento - SGCS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tecnicas.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="navbar-logo">
+            <span class="logo-icon"></span>
+            <span class="logo-title">Calidad de Software</span>
+        </div>
+        <button id="menu-toggle" class="menu-toggle-btn" aria-label="Abrir menú">☰</button>
+    </header>
+
+    <!-- Menú Lateral -->
+    <aside id="sidebar-menu" class="sidebar">
+        <div class="sidebar-header">
+            <h3>Navegación</h3>
+            <button id="menu-close" class="close-btn" aria-label="Cerrar menú">&times;</button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul class="menu-list">
+                <li class="menu-item">
+                    <a href="index.html" class="menu-link">
+                        <span class="num">01</span>
+                        <span class="text">Inicio</span>
+                    </a>
+                </li>
+                <li class="menu-item has-sub open">
+                    <div class="menu-link-group">
+                        <a href="tecnicas.html" class="menu-link active">
+                            <span class="num">02</span>
+                            <span class="text">Historias de usuario</span>
+                        </a>
+                        <span class="arrow">⌃</span>
+                    </div>
+
+                    <ul class="sub-menu level-1">
+                        <li><a href="fundamentos.html" class="sub-link">Fundamentos de Calidad</a></li>
+                        <li><a href="tecnicas.html" class="sub-link active">Técnicas de Aseguramiento</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="sdlc.html" class="menu-link">
+                        <span class="num">03</span>
+                        <span class="text">Ciclo SDLC</span>
+                    </a>
+                </li>
+                <li class="menu-item has-sub">
+                    <div class="menu-link-group">
+                        <a href="modelos.html" class="menu-link">
+                            <span class="num">04</span>
+                            <span class="text">Modelos de Desarrollo</span>
+                        </a>
+                        <span class="arrow">⌃</span>
+                    </div>
+
+                    <ul class="sub-menu level-1">
+                        <li><a href="tradicionales.html" class="sub-link">Modelos Tradicionales</a></li>
+                        <li><a href="agiles.html" class="sub-link">Metodologías Ágiles</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="herramientas.html" class="menu-link">
+                        <span class="num">05</span>
+                        <span class="text">Herramientas de Calidad</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="nosotros.html" class="menu-link">
+                        <span class="num">06</span>
+                        <span class="text">Nosotros</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+    <!-- Contenido Principal -->
+    <main class="main-container">
+        <section class="hero-card">
+            
+            <h1 class="hero-title">Técnicas de Aseguramiento de Calidad</h1>
+            <p class="hero-description">
+                Selecciona dos niveles o tipos de prueba en los menús desplegables para generar la tabla comparativa dinámica.
+            </p>
+
+            <!-- Bloque de Selección Estilizado -->
+            <div class="selectors-wrapper">
+                <div class="select-group">
+                    <label for="select-opcion-a">Opción A a comparar:</label>
+                    <select id="select-opcion-a">
+                        <option value="unitarias">Pruebas Unitarias</option>
+                        <option value="integracion" selected>Pruebas de Integración</option>
+                        <option value="sistema">Pruebas de Sistema</option>
+                        <option value="aceptacion">Pruebas de Aceptación (UAT)</option>
+                        <option value="caja-negra">Caja Negra</option>
+                        <option value="caja-blanca">Caja Blanca</option>
+                    </select>
+                </div>
+
+                <div class="vs-badge">VS</div>
+
+                <div class="select-group">
+                    <label for="select-opcion-b">Opción B a comparar:</label>
+                    <select id="select-opcion-b">
+                        <option value="unitarias">Pruebas Unitarias</option>
+                        <option value="integracion">Pruebas de Integración</option>
+                        <option value="sistema">Pruebas de Sistema</option>
+                        <option value="aceptacion">Pruebas de Aceptación (UAT)</option>
+                        <option value="caja-negra" selected>Caja Negra</option>
+                        <option value="caja-blanca">Caja Blanca</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Tabla Comparativa Dinámica dentro de Caja Oscura -->
+            <div class="tabla-comparativa-wrapper">
+                <table class="tabla-comparativa">
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th id="col-header-a">Pruebas de Integración</th>
+                            <th id="col-header-b">Caja Negra</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Categoría</td>
+                            <td id="cat-a">Nivel de Prueba</td>
+                            <td id="cat-b">Tipo / Técnica</td>
+                        </tr>
+                        <tr>
+                            <td>Objetivo Principal</td>
+                            <td id="obj-a">Verificar las interfaces y la comunicación entre diferentes módulos o servicios interconectados.</td>
+                            <td id="obj-b">Validar entradas y salidas del software evaluando requisitos sin examinar la estructura interna.</td>
+                        </tr>
+                        <tr>
+                            <td>Conocimiento del Código</td>
+                            <td id="cod-a">Conocimiento parcial del código e interfaces de comunicación.</td>
+                            <td id="cod-b">Cero conocimiento del código fuente interno.</td>
+                        </tr>
+                        <tr>
+                            <td>¿Quién las Ejecuta?</td>
+                            <td id="eje-a">Desarrolladores / Testers.</td>
+                            <td id="eje-b">Testers, QA y Usuarios finales (UAT).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="footer-site">
+        <div class="footer-simple-container">
+            <p class="footer-contact"><span class="contact-icon"></span> Contacto: <strong>@Extasiscalidad</strong></p>
+            <span class="footer-separator">•</span>
+            <p class="footer-location"><span class="location-icon"></span> Neuquén, Argentina</p>
+        </div>
+    </footer>
+
+    <script src="menu.js"></script>
+    <script src="tecnicas.js"></script>
+</body>
+</html>

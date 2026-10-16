@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodologías Ágiles - SGCS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="agiles.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="navbar-logo">
+            <span class="logo-icon"></span>
+            <span class="logo-title">Calidad de Software</span>
+        </div>
+        <button id="menu-toggle" class="menu-toggle-btn" aria-label="Abrir menú">☰</button>
+    </header>
+
+    <!-- Menú Lateral -->
+    <aside id="sidebar-menu" class="sidebar">
+        <div class="sidebar-header">
+            <h3>Navegación</h3>
+            <button id="menu-close" class="close-btn" aria-label="Cerrar menú">&times;</button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul class="menu-list">
+                <li class="menu-item">
+                    <a href="index.html" class="menu-link">
+                        <span class="num">01</span>
+                        <span class="text">Inicio</span>
+                    </a>
+                </li>
+                <li class="menu-item has-sub">
+                    <div class="menu-link-group">
+                        <a href="tecnicas.html" class="menu-link">
+                            <span class="num">02</span>
+                            <span class="text">Historias de usuario</span>
+                        </a>
+                        <span class="arrow">⌃</span>
+                    </div>
+                    <ul class="sub-menu level-1">
+                        <li><a href="fundamentos.html" class="sub-link">Fundamentos de Calidad</a></li>
+                        <li><a href="tecnicas.html" class="sub-link">Técnicas de Aseguramiento</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="sdlc.html" class="menu-link">
+                        <span class="num">03</span>
+                        <span class="text">Ciclo SDLC</span>
+                    </a>
+                </li>
+                <li class="menu-item has-sub open">
+                    <div class="menu-link-group">
+                        <a href="modelos.html" class="menu-link active">
+                            <span class="num">04</span>
+                            <span class="text">Modelos de Desarrollo</span>
+                        </a>
+                        <span class="arrow">⌃</span>
+                    </div>
+                    <ul class="sub-menu level-1">
+                        <li><a href="tradicionales.html" class="sub-link">Modelos Tradicionales</a></li>
+                        <li><a href="agiles.html" class="sub-link active">Metodologías Ágiles</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="herramientas.html" class="menu-link">
+                        <span class="num">05</span>
+                        <span class="text">Herramientas de Calidad</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="nosotros.html" class="menu-link">
+                        <span class="num">06</span>
+                        <span class="text">Nosotros</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+    <!-- Contenido Principal -->
+    <main class="main-container">
+        <section class="hero-card">
+            <h1 class="hero-title">Metodologías Ágiles y Marco Scrum</h1>
+            <p class="hero-description">
+                Modelos de gestión evolutiva basados en el conocimiento tácito de las personas, entregas frecuentes e incrementales y adaptabilidad continua al cambio.
+            </p>
+
+            <!-- Menú Rápido con Píldoras/Pastillas -->
+            <div class="agile-pills-nav">
+                <a href="#manifiesto" class="pill-nav-btn">Valores Ágiles</a>
+                <a href="#origen" class="pill-nav-btn">Naturaleza Scrum</a>
+                <a href="#roles" class="pill-nav-btn">Roles</a>
+                <a href="#artefactos" class="pill-nav-btn">Artefactos</a>
+                <a href="#eventos" class="pill-nav-btn">Eventos</a>
+                <a href="#practicas" class="pill-nav-btn">Prácticas</a>
+            </div>
+
+            <!-- 1. Los 4 Valores del Manifiesto Ágil -->
+            <div id="manifiesto" class="agile-card">
+                <span class="card-badge">MANIFIESTO ÁGIL (2001)</span>
+                <h2>Los 4 Valores Fundamentales</h2>
+                <p class="card-subtitle">Surgieron como antítesis a los modelos de ingeniería de software rígidos y predictivos:</p>
+                <ol class="valores-list">
+                    <li><strong>A los individuos y su interacción</strong> por encima de los procesos y las herramientas.</li>
+                    <li><strong>El software que funciona</strong> por encima de la documentación exhaustiva.</li>
+                    <li><strong>La colaboración con el cliente</strong> por encima de la negociación contractual.</li>
+                    <li><strong>La respuesta al cambio</strong> por encima del seguimiento de un plan.</li>
+                </ol>
+            </div>
+
+            <!-- 2. Origen y Naturaleza -->
+            <div id="origen" class="agile-card">
+                <span class="card-badge">MARCO DE TRABAJO</span>
+                <h2>Origen y Naturaleza de Scrum</h2>
+                <p>
+                    Scrum se caracteriza por el desarrollo incremental (iterativo o continuo), el solapamiento de fases de trabajo y por basar la calidad en el talento y la creatividad del equipo autogestionado.
+                </p>
+            </div>
+
+            <!-- 3. Roles del Equipo Scrum -->
+            <div id="roles" class="agile-card">
+                <span class="card-badge">ORGANIZACIÓN</span>
+                <h2>Roles del Equipo Scrum</h2>
+                <div class="grid-subcards">
+                    <div class="sub-item-card">
+                        <h3>Propietario del Producto (Product Owner)</h3>
+                        <p>Representa la voz del cliente, gestiona y prioriza la Pila del Producto (Product Backlog) y responde por el valor final entregado.</p>
+                    </div>
+                    <div class="sub-item-card">
+                        <h3>Desarrolladores (3 a 9 miembros)</h3>
+                        <p>Profesionales multifuncionales y autogestionados que construyen el incremento del producto de forma conjunta y solidaria.</p>
+                    </div>
+                    <div class="sub-item-card">
+                        <h3>Scrum Master</h3>
+                        <p>Responsable del cumplimiento y facilitación del marco Scrum, asesora al equipo y elimina los impedimentos que frenan el avance.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Artefactos Principales -->
+            <div id="artefactos" class="agile-card">
+                <span class="card-badge">ENTREGABLES</span>
+                <h2>Artefactos Principales</h2>
+                <ul class="agile-bullet-list">
+                    <li><strong>Pila del Producto (Product Backlog):</strong> Lista dinámica y viva de requisitos e historias de usuario priorizadas según su valor de negocio.</li>
+                    <li><strong>Pila del Sprint (Sprint Backlog):</strong> Conjunto de historias y tareas seleccionadas por los desarrolladores para ser ejecutadas en la iteración actual.</li>
+                    <li><strong>Incremento:</strong> Parte operativa del producto totalmente terminada, probada y lista para usarse que se entrega al final de cada Sprint.</li>
+                </ul>
+            </div>
+
+            <!-- 5. Eventos del Ciclo de Trabajo -->
+            <div id="eventos" class="agile-card">
+                <span class="card-badge">RITMO DE TRABAJO</span>
+                <h2>Eventos (Ciclo de Trabajo)</h2>
+                <ul class="agile-bullet-list">
+                    <li><strong>Sprint:</strong> Ciclo básico de desarrollo de duración fija (timeboxing, entre 1 y 4 semanas).</li>
+                    <li><strong>Planificación del Sprint:</strong> Reunión inicial para definir el objetivo del Sprint y descomponer los requisitos en tareas diarias.</li>
+                    <li><strong>Scrum Diario (Daily Scrum):</strong> Reunión breve de 15 minutos junto al tablero para sincronizar el trabajo diario e identificar problemas.</li>
+                    <li><strong>Revisión del Sprint:</strong> Demostración funcional del incremento terminado ante el cliente e interesados para obtener feedback.</li>
+                    <li><strong>Retrospectiva del Sprint:</strong> Análisis interno del equipo sobre la forma de trabajo para acordar e implementar mejoras continuas.</li>
+                </ul>
+            </div>
+
+            <!-- 6. Prácticas para Flexibilizar Scrum -->
+            <div id="practicas" class="agile-card">
+                <span class="card-badge">EXCELENCIA TÉCNICA</span>
+                <h2>Prácticas para Flexibilizar Scrum</h2>
+                <div class="grid-subcards">
+                    <div class="sub-item-card">
+                        <h3>Gráfico Burn Down</h3>
+                        <p>Visualización diaria del esfuerzo pendiente frente al tiempo restante del Sprint.</p>
+                    </div>
+                    <div class="sub-item-card">
+                        <h3>Estimación de Póquer</h3>
+                        <p>Dinámica de estimación basada en la secuencia de Fibonacci para mitigar riesgos en tareas complejas.</p>
+                    </div>
+                    <div class="sub-item-card">
+                        <h3>Tablero Kanban</h3>
+                        <p>Gestión visual mediante columnas (Pendiente, En Curso, Hecho) limitando el trabajo en progreso (WIP).</p>
+                    </div>
+                    <div class="sub-item-card">
+                        <h3>Extreme Programming (XP)</h3>
+                        <p>Enfoque técnico centrado en la excelencia mediante Programación en Pareja (Pair Programming) y Desarrollo Guiado por Pruebas (TDD).</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="footer-site">
+        <div class="footer-simple-container">
+            <p class="footer-contact"><span class="contact-icon"></span> Contacto: <strong>@Extasiscalidad</strong></p>
+            <span class="footer-separator">•</span>
+            <p class="footer-location"><span class="location-icon"></span> Neuquén, Argentina</p>
+        </div>
+    </footer>
+    <script src="agiles.js"></script>
+
+    <script src="menu.js"></script>
+</body>
+</html>
