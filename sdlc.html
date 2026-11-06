@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ciclo de Vida del Software (SDLC) - SGCS</title>
-    <link rel="stylesheet" href="CSS/styles.css">
+    <title>Procesos de Desarrollo (SDLC) - Éxtasis de Calidad</title>
+    <link rel="stylesheet" href="CSS/base.css">
     <link rel="stylesheet" href="CSS/sdlc.css">
 </head>
 <body>
@@ -12,179 +12,325 @@
     <!-- Header / Navbar -->
     <header class="navbar">
         <div class="navbar-logo">
-            <span class="logo-icon"></span>
-            <span class="logo-title">Calidad de Software</span>
+            <a href="index.html" class="logo-link">
+                <img src="img/logo-extasis.jpeg" alt="Logo Éxtasis de Calidad" class="site-logo-img">
+            </a>
+            <span class="brand-title">Calidad de Software</span>
         </div>
         <button id="menu-toggle" class="menu-toggle-btn" aria-label="Abrir menú">☰</button>
     </header>
 
-<!-- Menú Lateral -->
-<aside id="sidebar-menu" class="sidebar">
-    <div class="sidebar-header">
-        <h3>Navegación</h3>
-        <button id="menu-close" class="close-btn" aria-label="Cerrar menú">&times;</button>
-    </div>
+    <!-- Menú Lateral Maestro (7 Páginas) -->
+    <aside id="sidebar-menu" class="sidebar">
+        <div class="sidebar-header">
+            <h3>Navegación del Sitio</h3>
+            <button id="menu-close" class="close-btn" aria-label="Cerrar menú">&times;</button>
+        </div>
 
-    <nav class="sidebar-nav">
-        <ul class="menu-list">
-            <!-- 01 INICIO -->
-            <li class="menu-item">
-                <a href="index.html" class="menu-link">
-                    <span class="num">01</span>
-                    <span class="text">Inicio</span>
-                </a>
-            </li>
+        <nav class="sidebar-nav">
+            <ul class="menu-list">
+                <!-- 01. Inicio -->
+                <li class="menu-item">
+                    <a href="index.html" class="menu-link"><span class="num">01</span><span class="text">Inicio</span></a>
+                </li>
 
-            <!-- 02 GESTIÓN DE CALIDAD -->
-            <li class="menu-item has-sub">
-                <div class="menu-link-group">
-                    <a href="fundamentos.html" class="menu-link">
-                        <span class="num">02</span>
-                        <span class="text">Gestión de Calidad</span>
-                    </a>
-                    <span class="arrow">⌃</span>
-                </div>
+                <!-- 02. Gestión de Calidad -->
+                <li class="menu-item has-sub">
+                    <div class="menu-link-group">
+                        <a href="fundamentos.html" class="menu-link"><span class="num">02</span><span class="text">Gestión de Calidad</span></a>
+                        <span class="arrow">^</span>
+                    </div>
+                    <ul class="sub-menu level-1">
+                        <li><a href="fundamentos.html#fundamentos-section" class="sub-link">Fundamentos de calidad</a></li>
+                        <li><a href="fundamentos.html#tecnicas-section" class="sub-link">Técnicas de aseguramiento</a></li>
+                        <li><a href="fundamentos.html#herramientas-section" class="sub-link">Herramientas de calidad</a></li>
+                    </ul>
+                </li>
 
-                <ul class="sub-menu level-1">
-                    <li><a href="fundamentos.html" class="sub-link">Fundamentos de calidad</a></li>
-                    <li><a href="tecnicas.html" class="sub-link">Técnicas de aseguramiento</a></li>
-                    <li><a href="herramientas.html" class="sub-link">Herramientas de calidad</a></li>
-                </ul>
-            </li>
+                <!-- 03. Procesos de Desarrollo -->
+                <li class="menu-item has-sub">
+                    <div class="menu-link-group">
+                        <a href="sdlc.html" class="menu-link"><span class="num">03</span><span class="text">Procesos de desarrollo</span></a>
+                        <span class="arrow">^</span>
+                    </div>
+                    <ul class="sub-menu level-1">
+                        <li><a href="sdlc.html#sdlc-section" class="sub-link">Ciclo de vida (SDLC)</a></li>
+                        <li><a href="sdlc.html#modelos-section" class="sub-link">Modelos de desarrollo</a></li>
+                    </ul>
+                </li>
 
-            <!-- 03 PROCESOS DE DESARROLLO -->
-            <li class="menu-item has-sub">
-                <div class="menu-link-group">
-                    <a href="sdlc.html" class="menu-link">
-                        <span class="num">03</span>
-                        <span class="text">Procesos de desarrollo</span>
-                    </a>
-                    <span class="arrow">⌃</span>
-                </div>
+                <!-- 04. Metodologías Ágiles -->
+                <li class="menu-item has-sub">
+                    <div class="menu-link-group">
+                        <a href="agiles.html" class="menu-link"><span class="num">04</span><span class="text">Metodologías Ágiles</span></a>
+                        <span class="arrow">^</span>
+                    </div>
+                    <ul class="sub-menu level-1">
+                        <li><a href="agiles.html#agiles-section" class="sub-link">Panorama General & XP</a></li>
+                        <li><a href="agiles.html#scrum-section" class="sub-link">Scrum Profundo</a></li>
+                        <li><a href="agiles.html#kanban-section" class="sub-link">Kanban Profundo</a></li>
+                    </ul>
+                </li>
 
-                <ul class="sub-menu level-1">
-                    <li><a href="sdlc.html" class="sub-link">Ciclo de vida</a></li>
-                    <li><a href="modelos.html" class="sub-link">Modelos de desarrollo</a></li>
-                </ul>
-            </li>
+                <!-- 05. Herramientas de Calidad -->
+                <li class="menu-item has-sub">
+                    <div class="menu-link-group">
+                        <a href="herramientas.html" class="menu-link"><span class="num">05</span><span class="text">Herramientas de Calidad</span></a>
+                        <span class="arrow">^</span>
+                    </div>
+                    <ul class="sub-menu level-1">
+                        <li><a href="herramientas.html#comparador-section" class="sub-link">Comparador Interactivo</a></li>
+                        <li><a href="herramientas.html#encuesta-agil-section" class="sub-link">Encuesta de Preferencias</a></li>
+                    </ul>
+                </li>
 
-            <!-- 04 METODOLOGÍAS ÁGILES -->
-            <li class="menu-item has-sub">
-                <div class="menu-link-group">
-                    <a href="agiles.html" class="menu-link">
-                        <span class="num">04</span>
-                        <span class="text">Metodologías Ágiles</span>
-                    </a>
-                    <span class="arrow">⌃</span>
-                </div>
+                <!-- 06. Recursos y Aprendizaje -->
+                <li class="menu-item has-sub">
+                    <div class="menu-link-group">
+                        <a href="recursos.html" class="menu-link"><span class="num">06</span><span class="text">Recursos y aprendizaje</span></a>
+                        <span class="arrow">^</span>
+                    </div>
+                    <ul class="sub-menu level-1">
+                        <li><a href="recursos.html#glosario-section" class="sub-link">Glosario</a></li>
+                        <li><a href="recursos.html#faq-section" class="sub-link">Preguntas Frecuentes</a></li>
+                        <li><a href="recursos.html#enlaces-section" class="sub-link">Enlaces de Interés</a></li>
+                        <li><a href="recursos.html#ejercicios-section" class="sub-link">Ejercicios Prácticos</a></li>
+                    </ul>
+                </li>
 
-                <ul class="sub-menu level-1">
-                    <li><a href="agiles.html#origen" class="sub-link">SCRUM</a></li>
-                    <li><a href="agiles.html#practicas" class="sub-link">KANBAN</a></li>
-                    <li><a href="agiles.html#practicas" class="sub-link">XP</a></li>
-                </ul>
-            </li>
-
-            <!-- 05 RECURSOS Y APRENDIZAJE -->
-            <li class="menu-item">
-                <a href="herramientas.html" class="menu-link">
-                    <span class="num">05</span>
-                    <span class="text">Recursos y aprendizaje</span>
-                </a>
-            </li>
-
-            <!-- 06 NOSOTROS -->
-            <li class="menu-item">
-                <a href="nosotros.html" class="menu-link">
-                    <span class="num">06</span>
-                    <span class="text">Nosotros</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</aside>
+                <!-- 07. Nosotros y Contacto -->
+                <li class="menu-item has-sub">
+                    <div class="menu-link-group">
+                        <a href="nosotros.html" class="menu-link"><span class="num">07</span><span class="text">Nosotros y Contacto</span></a>
+                        <span class="arrow">^</span>
+                    </div>
+                    <ul class="sub-menu level-1">
+                        <li><a href="nosotros.html#nosotros-section" class="sub-link">Sobre Nosotros</a></li>
+                        <li><a href="nosotros.html#contacto-section" class="sub-link">Contacto y Feedback</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
 
     <div id="sidebar-overlay" class="sidebar-overlay"></div>
 
-    <!-- Contenido Principal -->
-    <main class="main-container">
-        <section class="sdlc-container">
-            <h1 class="hero-title">Ciclo de Vida del Desarrollo de Software (SDLC)</h1>
-            
+    <!-- Contenido Principal en Flujo Vertical (Long Scroll) -->
+    <main class="main-container main-vertical">
+        
+        <!-- SECCIÓN 1: CICLO DE VIDA (SDLC) -->
+        <section id="sdlc-section" class="hero-card-section">
+            <h1 class="section-hero-title">Ciclo de Vida del Desarrollo de Software (SDLC)</h1>
+            <p class="section-hero-desc">
+                El SDLC (Software Development Life Cycle) es el proceso estructurado y metódico mediante el cual se planea, crea, prueba y despliega un sistema de información de alta calidad.
+            </p>
 
-            <!-- Cuadro Teórico: Gestión Predictiva vs Evolutiva -->
-            <div class="sdlc-comparative-box">
-                <h2>Enfoques de Gestión del Ciclo de Vida</h2>
-                <div class="sdlc-grid-enfoques">
-                    <div class="enfoque-card predictivo">
-                        <h3>Gestión Predictiva (Secuencial)</h3>
-                        <p><strong>Estrategia:</strong> Desarrollo Completo. Requiere una definición detallada de requisitos al inicio.</p>
-                        <p><strong>Ejecución:</strong> Las fases (Requisitos → Diseño → Código → Pruebas) se realizan una tras otra en cascada.</p>
-                        <p><strong>Enfoque:</strong> Control de presupuesto, agenda fija y apego estricto al plan inicial.</p>
+            <!-- Enfoques de Gestión del Ciclo de Vida -->
+            <div class="inner-dark-card enfoques-card">
+                <h3 class="enfoques-main-title">Enfoques de Gestión del Ciclo de Vida</h3>
+                <div class="enfoques-grid-2">
+                    <div class="enfoque-col">
+                        <h4 class="enfoque-title">Gestión Predictiva (Secuencial)</h4>
+                        <p class="enfoque-text"><strong>Estrategia:</strong> Desarrollo Completo. Requiere una definición detallada de requisitos al inicio.</p>
+                        <p class="enfoque-text"><strong>Ejecución:</strong> Las fases (Requisitos → Diseño → Código → Pruebas) se realizan una sola vez en cascada.</p>
+                        <p class="enfoque-text"><strong>Enfoque:</strong> Control de presupuesto, agenda fija y apego estricto al plan inicial.</p>
                     </div>
-                    <div class="enfoque-card evolutivo">
-                        <h3>Gestión Evolutiva (Concurrente / Ágil)</h3>
-                        <p><strong>Estrategia:</strong> Desarrollo Incremental. Parte de un Mínimo Viable y evoluciona continuamente.</p>
-                        <p><strong>Ejecución:</strong> Fases solapadas. Se analiza, diseña, codifica y prueba simultáneamente en cada Sprint.</p>
-                        <p><strong>Enfoque:</strong> Adaptación rápida ante el cambio y entregas continuas de valor al cliente.</p>
+                    <div class="enfoque-col">
+                        <h4 class="enfoque-title">Gestión Evolutiva (Concurrente / Ágil)</h4>
+                        <p class="enfoque-text"><strong>Estrategia:</strong> Desarrollo Incremental. Parte de un Mínimo Viable y evoluciona continuamente.</p>
+                        <p class="enfoque-text"><strong>Ejecución:</strong> Fases solapadas. Se analizan, diseñan, codifican y prueban simultáneamente en cada Sprint.</p>
+                        <p class="enfoque-text"><strong>Enfoque:</strong> Adaptación rápida ante el cambio y entregas continuas de valor al cliente.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Línea de Tiempo SDLC -->
-            <h2 class="sub-section-title" style="margin-top: 35px; color: #ffffff;">Fases Estándar del SDLC</h2>
-            <div class="sdlc-timeline">
+            <!-- Fases Estándar del SDLC (Timeline Vertical) -->
+            <div class="timeline-section-container">
+                <h3 class="timeline-main-title">Fases Estándar del SDLC</h3>
                 
-                <div class="timeline-card">
-                    <span class="timeline-step-num">Etapa 01</span>
-                    <h3>Análisis de Requisitos</h3>
-                    <p>Definición del alcance del proyecto, identificación de necesidades del usuario y especificación de requisitos funcionales y de calidad.</p>
-                </div>
+                <div class="timeline-wrapper">
+                    <div class="timeline-line"></div>
 
-                <div class="timeline-card">
-                    <span class="timeline-step-num">Etapa 02</span>
-                    <h3>Diseño y Arquitectura</h3>
-                    <p>Modelado de datos, definición de patrones de arquitectura del sistema, diagramas de flujo y prototipado de interfaz (UI/UX).</p>
-                </div>
+                    <!-- Etapa 01 -->
+                    <div class="timeline-item">
+                        <div class="timeline-node"></div>
+                        <div class="inner-dark-card timeline-card">
+                            <span class="card-label">ETAPA 01</span>
+                            <h4 class="card-item-title">Análisis de Requisitos</h4>
+                            <p class="card-item-desc">Definición del alcance del proyecto, identificación de necesidades del usuario y especificación de requisitos funcionales y de calidad.</p>
+                        </div>
+                    </div>
 
-                <div class="timeline-card">
-                    <span class="timeline-step-num">Etapa 03</span>
-                    <h3>Desarrollo / Codificación</h3>
-                    <p>Traducción de los diseños a código fuente ejecutable aplicando estándares de programación limpia y refactorización constante.</p>
-                </div>
+                    <!-- Etapa 02 -->
+                    <div class="timeline-item">
+                        <div class="timeline-node"></div>
+                        <div class="inner-dark-card timeline-card">
+                            <span class="card-label">ETAPA 02</span>
+                            <h4 class="card-item-title">Diseño y Arquitectura</h4>
+                            <p class="card-item-desc">Modelado de datos, definición de patrones de arquitectura del sistema, diagramas de flujo y prototipado de interfaz (UI/UX).</p>
+                        </div>
+                    </div>
 
-                <div class="timeline-card">
-                    <span class="timeline-step-num">Etapa 04</span>
-                    <h3>Pruebas y Aseguramiento (QA)</h3>
-                    <p>Ejecución de pruebas unitarias, de integración y de sistema para garantizar que el producto cumple con la Definition of Done (DoD).</p>
-                </div>
+                    <!-- Etapa 03 -->
+                    <div class="timeline-item">
+                        <div class="timeline-node"></div>
+                        <div class="inner-dark-card timeline-card">
+                            <span class="card-label">ETAPA 03</span>
+                            <h4 class="card-item-title">Desarrollo / Codificación</h4>
+                            <p class="card-item-desc">Traducción de los diseños a código fuente ejecutable aplicando estándares de programación limpia y refactorización constante.</p>
+                        </div>
+                    </div>
 
-                <div class="timeline-card">
-                    <span class="timeline-step-num">Etapa 05</span>
-                    <h3>Despliegue e Integración</h3>
-                    <p>Puesta en producción del software o entrega del incremento operativo para su uso e inspección por el cliente.</p>
-                </div>
+                    <!-- Etapa 04 -->
+                    <div class="timeline-item">
+                        <div class="timeline-node"></div>
+                        <div class="inner-dark-card timeline-card">
+                            <span class="card-label">ETAPA 04</span>
+                            <h4 class="card-item-title">Pruebas y Aseguramiento (QA)</h4>
+                            <p class="card-item-desc">Ejecución de pruebas unitarias, de integración y de sistema para garantizar que el producto cumple con la Definition of Done (DoD).</p>
+                        </div>
+                    </div>
 
-                <div class="timeline-card">
-                    <span class="timeline-step-num">Etapa 06</span>
-                    <h3>Mantenimiento y Evolución</h3>
-                    <p>Atención a retroalimentación, corrección de incidencias reportadas en producción e incorporación progresiva de mejoras.</p>
-                </div>
+                    <!-- Etapa 05 -->
+                    <div class="timeline-item">
+                        <div class="timeline-node"></div>
+                        <div class="inner-dark-card timeline-card">
+                            <span class="card-label">ETAPA 05</span>
+                            <h4 class="card-item-title">Despliegue e Integración</h4>
+                            <p class="card-item-desc">Puesta en producción del software o entrega del incremento operativo para su uso e inspección por el cliente.</p>
+                        </div>
+                    </div>
 
+                    <!-- Etapa 06 -->
+                    <div class="timeline-item">
+                        <div class="timeline-node"></div>
+                        <div class="inner-dark-card timeline-card">
+                            <span class="card-label">ETAPA 06</span>
+                            <h4 class="card-item-title">Mantenimiento y Evolución</h4>
+                            <p class="card-item-desc">Atención a retroalimentación, corrección de incidencias reportadas en producción e incorporación progresiva de mejoras.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
+
+        <!-- SECCIÓN 2: MODELOS TRADICIONALES DE DESARROLLO -->
+        <section id="modelos-section" class="hero-card-section">
+            <h2 class="section-hero-title">Modelos Tradicionales de Desarrollo</h2>
+            <p class="section-hero-desc">
+                Compara los enfoques tradicionales de ciclo de vida del software (gestión predictiva e ingeniería secuencial), sus ventajas, desventajas y casos de uso recomendados.
+            </p>
+
+            <!-- Botones interactivos para alternar entre modelos -->
+            <div class="model-tabs-container">
+                <button class="model-tab-btn active" data-model="cascada">Modelo en Cascada</button>
+                <button class="model-tab-btn" data-model="en-v">Modelo en V</button>
+                <button class="model-tab-btn" data-model="iterativo">Iterativo e Incremental</button>
+            </div>
+
+            <!-- CONTENIDO: MODELO EN CASCADA -->
+            <div id="model-cascada" class="model-content-block">
+                <h3 class="model-subtitle">Modelo en Cascada (Predictivo)</h3>
+                <p class="model-subdesc">Enfoque secuencial estricto donde cada fase debe completarse y aprobarse antes de iniciar la siguiente. Ideal para proyectos con requisitos fijos, estables y bien conocidos de antemano.</p>
+                
+                <div class="model-grid-2">
+                    <div class="inner-dark-card border-green">
+                        <h4 class="card-box-title text-green">Ventajas</h4>
+                        <ul class="model-list">
+                            <li>Fácil de entender, administrar y aplicar debido a su rigidez.</li>
+                            <li>Los hitos y plazos son claramente definidos desde el inicio.</li>
+                            <li>Excelente para proyectos pequeños con requerimientos inalterables.</li>
+                        </ul>
+                    </div>
+                    <div class="inner-dark-card border-red">
+                        <h4 class="card-box-title text-red">Desventajas</h4>
+                        <ul class="model-list">
+                            <li>Alto riesgo: los errores detectados al final son costosos de corregir.</li>
+                            <li>No apto para proyectos complejos o donde los requisitos cambian.</li>
+                            <li>El cliente no ve un producto funcional hasta etapas muy avanzadas.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="inner-dark-card use-case-card">
+                    <h4 class="card-box-title"> ¿Cuándo utilizarlo?</h4>
+                    <p class="use-case-text">En proyectos de ingeniería donde los requisitos son perfectamente conocidos de antemano, estables, y el costo de los cambios tardíos es extremadamente alto.</p>
+                </div>
+            </div>
+
+            <!-- CONTENIDO: MODELO EN V -->
+            <div id="model-en-v" class="model-content-block hidden">
+                <h3 class="model-subtitle">Modelo en V (Validación y Verificación)</h3>
+                <p class="model-subdesc">Extensión del modelo en cascada que enfatiza la asociación de actividades de pruebas de software para cada fase de desarrollo correspondiente.</p>
+                
+                <div class="model-grid-2">
+                    <div class="inner-dark-card border-green">
+                        <h4 class="card-box-title text-green">Ventajas</h4>
+                        <ul class="model-list">
+                            <li>Planificación temprana de las pruebas vinculada a cada fase de diseño.</li>
+                            <li>Facilita la detección temprana de defectos antes de la codificación.</li>
+                            <li>Muy disciplinado y fácil de controlar mediante hitos estrictos.</li>
+                        </ul>
+                    </div>
+                    <div class="inner-dark-card border-red">
+                        <h4 class="card-box-title text-red">Desventajas</h4>
+                        <ul class="model-list">
+                            <li>Igual de inflexible y rígido ante cambios que el modelo en cascada tradicional.</li>
+                            <li>No maneja adecuadamente la incertidumbre o prototipos evolutivos.</li>
+                            <li>Requiere documentación técnica exhaustiva y precisa.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="inner-dark-card use-case-card">
+                    <h4 class="card-box-title"> ¿Cuándo utilizarlo?</h4>
+                    <p class="use-case-text">En sistemas críticos para la seguridad (médicos, aeronáuticos o industriales) donde la validación estricta de cada especificación técnica es obligatoria.</p>
+                </div>
+            </div>
+
+            <!-- CONTENIDO: ITERATIVO E INCREMENTAL -->
+            <div id="model-iterativo" class="model-content-block hidden">
+                <h3 class="model-subtitle">Modelo Iterativo e Incremental</h3>
+                <p class="model-subdesc">Estrategia que descompone el desarrollo en bloques parciales (incrementos), permitiendo evaluar y refinar el producto mediante entregas progresivas.</p>
+                
+                <div class="model-grid-2">
+                    <div class="inner-dark-card border-green">
+                        <h4 class="card-box-title text-green">Ventajas</h4>
+                        <ul class="model-list">
+                            <li>Entrega de versiones funcionales tempranas al cliente.</li>
+                            <li>Mayor capacidad de adaptación ante cambios de requisitos.</li>
+                            <li>Reducción del riesgo al validar componentes en cada iteración.</li>
+                        </ul>
+                    </div>
+                    <div class="inner-dark-card border-red">
+                        <h4 class="card-box-title text-red">Desventajas</h4>
+                        <ul class="model-list">
+                            <li>Requiere una arquitectura base sólida desde la primera versión.</li>
+                            <li>Dificultad para estimar el costo total final del proyecto sin un alcance cerrado.</li>
+                            <li>Riesgo de degradación de la estructura si se agregan módulos sin refactorizar.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="inner-dark-card use-case-card">
+                    <h4 class="card-box-title"> ¿Cuándo utilizarlo?</h4>
+                    <p class="use-case-text">En proyectos de alta complejidad o innovación donde los requisitos evolucionan según el comportamiento del mercado o retroalimentación del cliente.</p>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- Pie de Página -->
     <footer class="footer-site">
         <div class="footer-simple-container">
-            <p class="footer-contact"><span class="contact-icon"></span> Contacto: <strong>@Extasiscalidad</strong></p>
+            <p class="footer-contact">Contacto: <strong>@Extasiscalidad</strong></p>
             <span class="footer-separator">•</span>
-            <p class="footer-location"><span class="location-icon"></span> Neuquén, Argentina</p>
+            <p class="footer-location">Neuquén, Argentina</p>
         </div>
     </footer>
 
-    <script src="JS/sdlc.js"></script>
     <script src="JS/menu.js"></script>
+    <script src="JS/sdlc.js"></script>
 </body>
 </html>

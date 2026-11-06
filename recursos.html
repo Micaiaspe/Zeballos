@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos y Aprendizaje - Éxtasis de Calidad</title>
+    <link rel="stylesheet" href="CSS/base.css">
+    <link rel="stylesheet" href="CSS/recursos.css">
+</head>
+<body>
+
+    <!-- Header / Navbar principal -->
+    <header class="navbar">
+        <div class="navbar-logo">
+            <a href="index.html" class="logo-link">
+                <img src="img/logo-extasis.jpeg" alt="Logo Éxtasis de Calidad" class="site-logo-img">
+            </a>
+            <span class="brand-title">Calidad de Software</span>
+        </div>
+        <button id="menu-toggle" class="menu-toggle-btn" aria-label="Abrir menú">☰</button>
+    </header>
+
+    <!-- Menú Lateral Maestro (7 Páginas) -->
+    <aside id="sidebar-menu" class="sidebar">
+        <div class="sidebar-header">
+            <h3>Navegación del Sitio</h3>
+            <button id="menu-close" class="close-btn" aria-label="Cerrar menú">&times;</button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul class="menu-list">
+                <!-- 01. Inicio -->
+                <li class="menu-item">
+                    <a href="index.html" class="menu-link"><span class="num">01</span><span class="text">Inicio</span></a>
+                </li>
+
+                <!-- 02. Gestión de Calidad -->
+                <li class="menu-item has-sub">
+                    <div class="menu-link-group">
+                        <a href="fundamentos.html" class="menu-link"><span class="num">02</span><span class="text">Gestión de Calidad</span></a>
+                        <span class="arrow">^</span>
+                    </div>
+                    <ul class="sub-menu level-1">
+                        <li><a href="fundamentos.html#fundamentos-section" class="sub-link">Fundamentos de calidad</a></li>
+                        <li><a href="fundamentos.html#tecnicas-section" class="sub-link">Técnicas de aseguramiento</a></li>
+                        <li><a href="fundamentos.html#herramientas-section" class="sub-link">Herramientas de calidad</a></li>
+                    </ul>
+                </li>
+
+                <!-- 03. Procesos de Desarrollo -->
+                <li class="menu-item has-sub">
+                    <div class="menu-link-group">
+                        <a href="sdlc.html" class="menu-link"><span class="num">03</span><span class="text">Procesos de desarrollo</span></a>
+                        <span class="arrow">^</span>
+                    </div>
+                    <ul class="sub-menu level-1">
+                        <li><a href="sdlc.html#sdlc-section" class="sub-link">Ciclo de vida (SDLC)</a></li>
+                        <li><a href="sdlc.html#modelos-section" class="sub-link">Modelos de desarrollo</a></li>
+                    </ul>
+                </li>
+
+                <!-- 04. Metodologías Ágiles -->
+                <li class="menu-item has-sub">
+                    <div class="menu-link-group">
+                        <a href="agiles.html" class="menu-link"><span class="num">04</span><span class="text">Metodologías Ágiles</span></a>
+                        <span class="arrow">^</span>
+                    </div>
+                    <ul class="sub-menu level-1">
+                        <li><a href="agiles.html#agiles-section" class="sub-link">Panorama General & XP</a></li>
+                        <li><a href="agiles.html#scrum-section" class="sub-link">Scrum Profundo</a></li>
+                        <li><a href="agiles.html#kanban-section" class="sub-link">Kanban Profundo</a></li>
+                    </ul>
+                </li>
+
+                <!-- 05. Herramientas de Calidad -->
+                <li class="menu-item has-sub">
+                    <div class="menu-link-group">
+                        <a href="herramientas.html" class="menu-link"><span class="num">05</span><span class="text">Herramientas de Calidad</span></a>
+                        <span class="arrow">^</span>
+                    </div>
+                    <ul class="sub-menu level-1">
+                        <li><a href="herramientas.html#comparador-section" class="sub-link">Comparador Interactivo</a></li>
+                        <li><a href="herramientas.html#encuesta-agil-section" class="sub-link">Encuesta de Preferencias</a></li>
+                    </ul>
+                </li>
+
+                <!-- 06. Recursos y Aprendizaje -->
+                <li class="menu-item has-sub">
+                    <div class="menu-link-group">
+                        <a href="recursos.html" class="menu-link"><span class="num">06</span><span class="text">Recursos y aprendizaje</span></a>
+                        <span class="arrow">^</span>
+                    </div>
+                    <ul class="sub-menu level-1">
+                        <li><a href="recursos.html#glosario-section" class="sub-link">Glosario</a></li>
+                        <li><a href="recursos.html#faq-section" class="sub-link">Preguntas Frecuentes</a></li>
+                        <li><a href="recursos.html#enlaces-section" class="sub-link">Enlaces de Interés</a></li>
+                        <li><a href="recursos.html#ejercicios-section" class="sub-link">Ejercicios Prácticos</a></li>
+                    </ul>
+                </li>
+
+                <!-- 07. Nosotros y Contacto -->
+                <li class="menu-item has-sub">
+                    <div class="menu-link-group">
+                        <a href="nosotros.html" class="menu-link"><span class="num">07</span><span class="text">Nosotros y Contacto</span></a>
+                        <span class="arrow">^</span>
+                    </div>
+                    <ul class="sub-menu level-1">
+                        <li><a href="nosotros.html#nosotros-section" class="sub-link">Sobre Nosotros</a></li>
+                        <li><a href="nosotros.html#contacto-section" class="sub-link">Contacto y Feedback</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+    <!-- Contenedor Principal (Long Scroll en Tarjetas Gigantes Lavanda) -->
+    <main class="main-container resources-vertical-stack">
+
+        <!-- 1. SECCIÓN: GLOSARIO (US-12) -->
+        <section id="glosario-section" class="hero-card-section">
+            <h1 class="section-hero-title">Glosario de Términos</h1>
+            <p class="section-hero-desc">
+                Consulta las definiciones clave sobre calidad de software, pruebas y metodologías de desarrollo.
+            </p>
+
+            <div class="inner-dark-card" style="margin-bottom: 20px;">
+                <div class="search-input-wrapper">
+                    <span class="search-icon"></span>
+                    <input type="text" id="glossary-search" placeholder="Buscar término o concepto..." class="glossary-search-bar">
+                </div>
+
+                <div class="alphabet-filter-container">
+                    <button class="letter-btn active" data-letter="all">Todos</button>
+                    <button class="letter-btn" data-letter="A">A</button>
+                    <button class="letter-btn" data-letter="B">B</button>
+                    <button class="letter-btn" data-letter="C">C</button>
+                    <button class="letter-btn" data-letter="D">D</button>
+                    <button class="letter-btn" data-letter="I">I</button>
+                    <button class="letter-btn" data-letter="K">K</button>
+                    <button class="letter-btn" data-letter="P">P</button>
+                    <button class="letter-btn" data-letter="Q">Q</button>
+                    <button class="letter-btn" data-letter="S">S</button>
+                    <button class="letter-btn" data-letter="W">W</button>
+                </div>
+            </div>
+
+            <div class="inner-dark-card" id="glossary-list-container">
+                
+                <!-- Letra A -->
+                <div class="glossary-group" data-group-letter="A">
+                    <h3 class="letter-group-header">A</h3>
+                    <div class="glossary-item">
+                        <h4 class="term-title">Aseguramiento de la Calidad (QA)</h4>
+                        <p class="term-definition">Conjunto de actividades planificadas y sistemáticas orientadas a garantizar que los procesos de desarrollo produzcan software que cumpla con los requisitos especificados.</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4 class="term-title">Artefactos de Scrum</h4>
+                        <p class="term-definition">Elementos físicos o digitales que representan trabajo o valor en Scrum, como el Product Backlog, Sprint Backlog e Incremento.</p>
+                    </div>
+                </div>
+
+                <!-- Letra B -->
+                <div class="glossary-group" data-group-letter="B">
+                    <h3 class="letter-group-header">B</h3>
+                    <div class="glossary-item">
+                        <h4 class="term-title">Bug / Defecto</h4>
+                        <p class="term-definition">Error o fallo en el código fuente que provoca que un programa se comporte de manera imprevista o incorrecta.</p>
+                    </div>
+                </div>
+
+                <!-- Letra C -->
+                <div class="glossary-group" data-group-letter="C">
+                    <h3 class="letter-group-header">C</h3>
+                    <div class="glossary-item">
+                        <h4 class="term-title">Control de Calidad (QC)</h4>
+                        <p class="term-definition">Técnicas y actividades operativas utilizadas para verificar que los entregables finales cumplan los requisitos de calidad exigidos.</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4 class="term-title">Ciclo de Vida del Software (SDLC)</h4>
+                        <p class="term-definition">Proceso estructurado que describe las fases necesarias para desarrollar un sistema de software, desde el análisis hasta el mantenimiento.</p>
+                    </div>
+                </div>
+
+                <!-- Letra D -->
+                <div class="glossary-group" data-group-letter="D">
+                    <h3 class="letter-group-header">D</h3>
+                    <div class="glossary-item">
+                        <h4 class="term-title">Daily Scrum</h4>
+                        <p class="term-definition">Reunión diaria de 15 minutos para que el equipo de desarrollo sincronice actividades y planifique el trabajo de las siguientes 24 horas.</p>
+                    </div>
+                </div>
+
+                <!-- Letra I -->
+                <div class="glossary-group" data-group-letter="I">
+                    <h3 class="letter-group-header">I</h3>
+                    <div class="glossary-item">
+                        <h4 class="term-title">ISO/IEC 25000 (SQuaRE)</h4>
+                        <p class="term-definition">Familia de normas internacionales destinada a la evaluación de la calidad de los productos de software.</p>
+                    </div>
+                </div>
+
+                <!-- Letra K -->
+                <div class="glossary-group" data-group-letter="K">
+                    <h3 class="letter-group-header">K</h3>
+                    <div class="glossary-item">
+                        <h4 class="term-title">Kanban</h4>
+                        <p class="term-definition">Método visual de gestión de flujo de trabajo que limita el trabajo en proceso (WIP) para optimizar la eficiencia.</p>
+                    </div>
+                </div>
+
+                <!-- Letra P -->
+                <div class="glossary-group" data-group-letter="P">
+                    <h3 class="letter-group-header">P</h3>
+                    <div class="glossary-item">
+                        <h4 class="term-title">Product Backlog</h4>
+                        <p class="term-definition">Lista ordenada y emergente de todo lo que se necesita en el producto, gestionada exclusivamente por el Product Owner.</p>
+                    </div>
+                </div>
+
+                <!-- Letra Q -->
+                <div class="glossary-group" data-group-letter="Q">
+                    <h3 class="letter-group-header">Q</h3>
+                    <div class="glossary-item">
+                        <h4 class="term-title">QA (Quality Assurance)</h4>
+                        <p class="term-definition">Enfoque preventivo enfocado en mejorar y garantizar la correcta ejecución de los procesos de desarrollo.</p>
+                    </div>
+                </div>
+
+                <!-- Letra S -->
+                <div class="glossary-group" data-group-letter="S">
+                    <h3 class="letter-group-header">S</h3>
+                    <div class="glossary-item">
+                        <h4 class="term-title">Sprint</h4>
+                        <p class="term-definition">Iteración de tiempo fijo (1 a 4 semanas) en Scrum donde se crea un incremento de producto utilizable.</p>
+                    </div>
+                </div>
+
+                <!-- Letra W -->
+                <div class="glossary-group" data-group-letter="W">
+                    <h3 class="letter-group-header">W</h3>
+                    <div class="glossary-item">
+                        <h4 class="term-title">WIP (Work In Progress)</h4>
+                        <p class="term-definition">Límite de tareas que pueden encontrarse de manera simultánea en una etapa específica del flujo de trabajo.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 2. SECCIÓN: PREGUNTAS FRECUENTES (US-13) -->
+        <section id="faq-section" class="hero-card-section">
+            <h2 class="section-hero-title">Preguntas Frecuentes (FAQ)</h2>
+            <p class="section-hero-desc">
+                Encuentra respuestas rápidas a las dudas más comunes sobre la gestión de calidad, pruebas de software y metodologías.
+            </p>
+
+            <div class="faq-accordion-container">
+                <details class="inner-dark-card faq-card-item">
+                    <summary class="faq-summary-title">¿Cuál es la diferencia principal entre el Aseguramiento de la Calidad (QA) y el Control de Calidad (QC)?</summary>
+                    <p class="faq-answer-text">QA se enfoca en los procesos para prevenir defectos, mientras que QC se enfoca en la inspección y prueba del producto final para encontrar errores.</p>
+                </details>
+
+                <details class="inner-dark-card faq-card-item">
+                    <summary class="faq-summary-title">¿Qué diferencia hay entre pruebas de Caja Negra y Caja Blanca?</summary>
+                    <p class="faq-answer-text">Caja negra evalúa la funcionalidad sin conocer el código interno; caja blanca analiza directamente la estructura y la lógica del código fuente.</p>
+                </details>
+
+                <details class="inner-dark-card faq-card-item">
+                    <summary class="faq-summary-title">¿Cuándo conviene utilizar un modelo tradicional (Cascada) en lugar de una metodología ágil?</summary>
+                    <p class="faq-answer-text">Conviene en proyectos con requisitos altamente estrictos, fijos y bien conocidos desde el inicio sin expectativas de cambios mayores.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- 3. SECCIÓN: ENLACES DE INTERÉS (US-14) -->
+        <section id="enlaces-section" class="hero-card-section">
+            <h2 class="section-hero-title">Enlaces y Recursos de Interés</h2>
+            <p class="section-hero-desc">
+                Explora fuentes oficiales, estándares internacionales y documentación clave para profundizar en la calidad de software.
+            </p>
+
+            <!-- Grilla idéntica al diseño de referencia -->
+            <div class="links-grid-container">
+                <div class="inner-dark-card link-card-box">
+                    <span class="card-tag">ORGANIZACIÓN</span>
+                    <h3 class="card-box-title">Scrum Guides Oficial</h3>
+                    <p class="card-desc">La guía oficial y actualizada de Scrum escrita por sus creadores Ken Schwaber y Jeff Sutherland.</p>
+                    <a href="https://www.scrumguides.org/" target="_blank" rel="noopener noreferrer" class="card-action-btn">Visitar sitio ↗</a>
+                </div>
+
+                <div class="inner-dark-card link-card-box">
+                    <span class="card-tag">PDF / ESTÁNDAR</span>
+                    <h3 class="card-box-title">ISO/IEC 25000 (SQuaRE)</h3>
+                    <p class="card-desc">Documentación de referencia sobre la evaluación de la calidad del producto de software.</p>
+                    <a href="https://www.iso.org/" target="_blank" rel="noopener noreferrer" class="card-action-btn">Ver Estándar ↗</a>
+                </div>
+
+                <div class="inner-dark-card link-card-box">
+                    <span class="card-tag">RECURSO WEB</span>
+                    <h3 class="card-box-title">Agile Manifesto</h3>
+                    <p class="card-desc">El Manifiesto para el Desarrollo de Software Ágil, con sus 4 valores y 12 principios fundamentales.</p>
+                    <a href="https://agilemanifesto.org/iso/es/" target="_blank" rel="noopener noreferrer" class="card-action-btn">Leer Manifiesto ↗</a>
+                </div>
+
+                <div class="inner-dark-card link-card-box">
+                    <span class="card-tag">LIBRO / DOCUMENTACIÓN</span>
+                    <h3 class="card-box-title">ISTQB Glossary & Syllabi</h3>
+                    <p class="card-desc">El estándar internacional para certificaciones en pruebas y calidad de software.</p>
+                    <a href="https://www.istqb.org/" target="_blank" rel="noopener noreferrer" class="card-action-btn">Explorar ISTQB ↗</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SECCIÓN: EJERCICIOS PRÁCTICOS (US-15) -->
+        <section id="ejercicios-section" class="hero-card-section">
+            <h2 class="section-hero-title">Ejercicios y Casos Prácticos</h2>
+            <p class="section-hero-desc">
+                Pon a prueba tus conocimientos resolviendo escenarios reales de calidad de software y verifica las pautas de solución.
+            </p>
+
+            <div class="exercises-stack-container">
+                <!-- Caso 01 -->
+                <div class="inner-dark-card exercise-card-box">
+                    <span class="card-tag">CASO 01</span>
+                    <h3 class="card-box-title">Selección de Modelo de Desarrollo</h3>
+                    <p class="card-desc">Una entidad bancaria necesita desarrollar una nueva plataforma de transacciones internacionales altamente regulada, donde los requisitos de seguridad y normativas legales son estrictos y no cambiarán durante todo el proceso. ¿Qué modelo de desarrollo (Cascada o Ágil) seleccionarías y por qué?</p>
+                    
+                    <details class="solution-dropdown">
+                        <summary class="solution-toggle-btn">Mostrar Solución </summary>
+                        <div class="solution-content-box">
+                            <p><strong>Pauta de Evaluación:</strong> Se recomienda el <strong>Modelo en Cascada (Tradicional)</strong>. Dado que los requisitos son fijos, estables y están fuertemente regulados por normativas legales, la planificación anticipada y el control estricto de etapas (con revisiones exhaustivas de calidad por fase) garantizan un cumplimiento normativo superior frente a la flexibilidad cambiante del desarrollo ágil.</p>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Caso 02 -->
+                <div class="inner-dark-card exercise-card-box">
+                    <span class="card-tag">CASO 02</span>
+                    <h3 class="card-box-title">Identificación de Tipos de Pruebas</h3>
+                    <p class="card-desc">Un equipo de desarrollo de software acaba de terminar de programar una función matemática individual que calcula el interés compuesto de un préstamo. Antes de integrar esta función con el resto del sistema, un desarrollador escribe una rutina automatizada para probar todos los valores posibles de entrada. ¿Qué nivel y tipo de prueba se está aplicando?</p>
+                    
+                    <details class="solution-dropdown">
+                        <summary class="solution-toggle-btn">Mostrar Solución </summary>
+                        <div class="solution-content-box">
+                            <p><strong>Pauta de Evaluación:</strong> Se está aplicando una <strong>Prueba Unitaria</strong> a nivel de componentes individuales, utilizando técnicas de caja blanca para verificar la lógica interna de la función matemática.</p>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Caso 03 -->
+                <div class="inner-dark-card exercise-card-box">
+                    <span class="card-tag">CASO 03</span>
+                    <h3 class="card-box-title">Optimización de Flujo Kanban</h3>
+                    <p class="card-desc">En un tablero Kanban, el equipo nota que la columna "En Pruebas (QA)" acumula una cantidad masiva de tareas pendientes de revisión, mientras que "En Proceso" sigue sumando nuevas tareas. ¿Qué principio o práctica de Kanban se está incumpliendo y qué medida correctiva se debe aplicar?</p>
+                    
+                    <details class="solution-dropdown">
+                        <summary class="solution-toggle-btn">Mostrar Solución </summary>
+                        <div class="solution-content-box">
+                            <p><strong>Pauta de Evaluación:</strong> Se está incumpliendo la práctica de <strong>limitar el Trabajo en Proceso (WIP - Work in Progress)</strong>. La medida correctiva consiste en establecer un límite estricto de tareas simultáneas en la columna de pruebas para evitar cuellos de botella antes de aceptar nuevo trabajo.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="footer-site">
+        <div class="footer-simple-container">
+            <p class="footer-contact">Contacto: <strong>@Extasiscalidad</strong></p>
+            <span class="footer-separator">•</span>
+            <p class="footer-location">Neuquén, Argentina</p>
+        </div>
+    </footer>
+
+    <script src="JS/menu.js"></script>
+    <script src="JS/recursos.js"></script>
+</body>
+</html>

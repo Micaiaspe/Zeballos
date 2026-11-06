@@ -1,0 +1,285 @@
+/* ===================================================
+   ESTILOS DE RECURSOS Y APRENDIZAJE - CORRECCIÓN DE COLORES
+   =================================================== */
+
+.resources-vertical-stack {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 40px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.resources-vertical-stack .hero-card-section {
+    background-color: #aa8eed !important;
+    border-radius: 28px !important;
+    padding: 35px 30px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25) !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.resources-vertical-stack .section-hero-title {
+    color: #171226 !important; /* Título principal oscuro de alta visibilidad sobre lavanda */
+    font-size: 2rem !important;
+    font-weight: 800 !important;
+    margin-bottom: 8px !important;
+}
+
+.resources-vertical-stack .section-hero-desc {
+    color: #251d34 !important; /* Descripción oscura bien legible */
+    font-size: 0.95rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 25px !important;
+}
+
+/* Tarjeta contenedora interior oscura */
+.inner-dark-card {
+    background-color: #251d34 !important;
+    border-radius: 16px !important;
+    padding: 24px !important;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.3) !important;
+}
+
+/* Buscador y Filtros */
+.search-input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.9rem;
+    opacity: 0.8;
+    color: #fff;
+}
+
+.glossary-search-bar {
+    width: 100%;
+    padding: 12px 14px 12px 40px;
+    background-color: #171226 !important;
+    border: 1px solid rgba(170, 142, 237, 0.3);
+    border-radius: 10px;
+    color: #ffffff !important;
+    font-size: 0.9rem;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.glossary-search-bar::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.alphabet-filter-container {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.letter-btn {
+    background-color: #171226 !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(170, 142, 237, 0.2);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.letter-btn:hover {
+    background-color: #312646 !important;
+}
+
+.letter-btn.active {
+    background-color: #aa8eed !important;
+    color: #171226 !important;
+    border-color: #aa8eed !important;
+}
+
+/* Grupos y Elementos del Glosario (dentro de la tarjeta oscura) */
+.glossary-group {
+    margin-bottom: 25px;
+}
+
+.glossary-group:last-child {
+    margin-bottom: 0;
+}
+
+.letter-group-header {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #aa8eed !important;
+    border-bottom: 2px solid rgba(170, 142, 237, 0.3);
+    padding-bottom: 6px;
+    margin-bottom: 15px;
+}
+
+.glossary-item {
+    margin-bottom: 18px;
+}
+
+.glossary-item:last-child {
+    margin-bottom: 0;
+}
+
+.term-title {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #ffffff !important; /* Títulos de términos blancos nítidos */
+    margin-bottom: 4px;
+}
+
+.term-definition {
+    font-size: 0.88rem;
+    color: #d1c4e9 !important; /* Texto claro lavanda con excelente contraste */
+    line-height: 1.5;
+}
+
+/* Acordeón de FAQ */
+.faq-accordion-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-card-item {
+    cursor: pointer;
+    background-color: #251d34 !important;
+    border-radius: 14px !important;
+    padding: 18px 20px !important;
+    border: 1px solid rgba(170, 142, 237, 0.2);
+}
+
+.faq-summary-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff !important;
+    outline: none;
+}
+
+.faq-answer-text {
+    font-size: 0.88rem;
+    color: #d1c4e9 !important;
+    line-height: 1.5;
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Grilla de Enlaces y Casos */
+.links-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.inline-btn {
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 12px;
+    color: #aa8eed !important;
+    font-weight: 700;
+}
+
+.inline-btn:hover {
+    text-decoration: underline;
+}
+/* Estilos precisos para la grilla de enlaces y tarjetas de ejercicios */
+.links-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.link-card-box, .exercise-card-box {
+    background-color: #251d34 !important;
+    border-radius: 16px !important;
+    padding: 22px !important;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid rgba(170, 142, 237, 0.15);
+}
+
+.card-tag {
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    color: #aa8eed;
+    text-transform: uppercase;
+}
+
+.card-box-title {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #ffffff !important;
+    margin: 0;
+}
+
+.card-desc {
+    font-size: 0.85rem;
+    color: #d1c4e9 !important;
+    line-height: 1.45;
+    margin: 0;
+}
+
+.card-action-btn {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #aa8eed !important;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.card-action-btn:hover {
+    color: #ffffff !important;
+    text-decoration: underline;
+}
+
+/* Apilado de ejercicios */
+.exercises-stack-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilo para las soluciones desplegables */
+.solution-dropdown {
+    margin-top: 10px;
+    background-color: #1a1426;
+    border-radius: 10px;
+    border: 1px solid rgba(170, 142, 237, 0.2);
+    overflow: hidden;
+}
+
+.solution-toggle-btn {
+    padding: 10px 14px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #aa8eed;
+    cursor: pointer;
+    outline: none;
+    list-style: none;
+    user-select: none;
+}
+
+.solution-toggle-btn::-webkit-details-marker {
+    display: none;
+}
+
+.solution-content-box {
+    padding: 12px 14px;
+    background-color: #171226;
+    border-top: 1px solid rgba(170, 142, 237, 0.15);
+    font-size: 0.84rem;
+    color: #d1c4e9;
+    line-height: 1.5;
+}

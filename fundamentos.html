@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fundamentos de Calidad - SGCS</title>
-    <link rel="stylesheet" href="CSS/styles.css">
+    <title>Gestión de Calidad - Éxtasis de Calidad</title>
+    <link rel="stylesheet" href="CSS/base.css">
     <link rel="stylesheet" href="CSS/fundamentos.css">
 </head>
 <body>
@@ -12,163 +12,312 @@
     <!-- Header / Navbar -->
     <header class="navbar">
         <div class="navbar-logo">
-            <span class="logo-icon"></span>
-            <span class="logo-title">Calidad de Software</span>
+            <a href="index.html" class="logo-link">
+                <img src="img/logo-extasis.jpeg" alt="Logo Éxtasis de Calidad" class="site-logo-img">
+            </a>
+            <span class="brand-title">Calidad de Software</span>
         </div>
         <button id="menu-toggle" class="menu-toggle-btn" aria-label="Abrir menú">☰</button>
     </header>
 
-<!-- Menú Lateral -->
-<aside id="sidebar-menu" class="sidebar">
-    <div class="sidebar-header">
-        <h3>Navegación</h3>
-        <button id="menu-close" class="close-btn" aria-label="Cerrar menú">&times;</button>
-    </div>
+    <!-- Menú Lateral Maestro (7 Páginas) -->
+    <aside id="sidebar-menu" class="sidebar">
+        <div class="sidebar-header">
+            <h3>Navegación del Sitio</h3>
+            <button id="menu-close" class="close-btn" aria-label="Cerrar menú">&times;</button>
+        </div>
 
-    <nav class="sidebar-nav">
-        <ul class="menu-list">
-            <!-- 01 INICIO -->
-            <li class="menu-item">
-                <a href="index.html" class="menu-link">
-                    <span class="num">01</span>
-                    <span class="text">Inicio</span>
-                </a>
-            </li>
+        <nav class="sidebar-nav">
+            <ul class="menu-list">
+                <!-- 01. Inicio -->
+                <li class="menu-item">
+                    <a href="index.html" class="menu-link"><span class="num">01</span><span class="text">Inicio</span></a>
+                </li>
 
-            <!-- 02 GESTIÓN DE CALIDAD -->
-            <li class="menu-item has-sub">
-                <div class="menu-link-group">
-                    <a href="fundamentos.html" class="menu-link">
-                        <span class="num">02</span>
-                        <span class="text">Gestión de Calidad</span>
-                    </a>
-                    <span class="arrow">⌃</span>
-                </div>
+                <!-- 02. Gestión de Calidad -->
+                <li class="menu-item has-sub">
+                    <div class="menu-link-group">
+                        <a href="fundamentos.html" class="menu-link"><span class="num">02</span><span class="text">Gestión de Calidad</span></a>
+                        <span class="arrow">^</span>
+                    </div>
+                    <ul class="sub-menu level-1">
+                        <li><a href="fundamentos.html#fundamentos-section" class="sub-link">Fundamentos de calidad</a></li>
+                        <li><a href="fundamentos.html#tecnicas-section" class="sub-link">Técnicas de aseguramiento</a></li>
+                        <li><a href="fundamentos.html#herramientas-section" class="sub-link">Herramientas de calidad</a></li>
+                    </ul>
+                </li>
 
-                <ul class="sub-menu level-1">
-                    <li><a href="fundamentos.html" class="sub-link">Fundamentos de calidad</a></li>
-                    <li><a href="tecnicas.html" class="sub-link">Técnicas de aseguramiento</a></li>
-                    <li><a href="herramientas.html" class="sub-link">Herramientas de calidad</a></li>
-                </ul>
-            </li>
+                <!-- 03. Procesos de Desarrollo -->
+                <li class="menu-item has-sub">
+                    <div class="menu-link-group">
+                        <a href="sdlc.html" class="menu-link"><span class="num">03</span><span class="text">Procesos de desarrollo</span></a>
+                        <span class="arrow">^</span>
+                    </div>
+                    <ul class="sub-menu level-1">
+                        <li><a href="sdlc.html#sdlc-section" class="sub-link">Ciclo de vida (SDLC)</a></li>
+                        <li><a href="sdlc.html#modelos-section" class="sub-link">Modelos de desarrollo</a></li>
+                    </ul>
+                </li>
 
-            <!-- 03 PROCESOS DE DESARROLLO -->
-            <li class="menu-item has-sub">
-                <div class="menu-link-group">
-                    <a href="sdlc.html" class="menu-link">
-                        <span class="num">03</span>
-                        <span class="text">Procesos de desarrollo</span>
-                    </a>
-                    <span class="arrow">⌃</span>
-                </div>
+                <!-- 04. Metodologías Ágiles -->
+                <li class="menu-item has-sub">
+                    <div class="menu-link-group">
+                        <a href="agiles.html" class="menu-link"><span class="num">04</span><span class="text">Metodologías Ágiles</span></a>
+                        <span class="arrow">^</span>
+                    </div>
+                    <ul class="sub-menu level-1">
+                        <li><a href="agiles.html#agiles-section" class="sub-link">Panorama General & XP</a></li>
+                        <li><a href="agiles.html#scrum-section" class="sub-link">Scrum Profundo</a></li>
+                        <li><a href="agiles.html#kanban-section" class="sub-link">Kanban Profundo</a></li>
+                    </ul>
+                </li>
 
-                <ul class="sub-menu level-1">
-                    <li><a href="sdlc.html" class="sub-link">Ciclo de vida</a></li>
-                    <li><a href="modelos.html" class="sub-link">Modelos de desarrollo</a></li>
-                </ul>
-            </li>
+                <!-- 05. Herramientas de Calidad -->
+                <li class="menu-item has-sub">
+                    <div class="menu-link-group">
+                        <a href="herramientas.html" class="menu-link"><span class="num">05</span><span class="text">Herramientas de Calidad</span></a>
+                        <span class="arrow">^</span>
+                    </div>
+                    <ul class="sub-menu level-1">
+                        <li><a href="herramientas.html#comparador-section" class="sub-link">Comparador Interactivo</a></li>
+                        <li><a href="herramientas.html#encuesta-agil-section" class="sub-link">Encuesta de Preferencias</a></li>
+                    </ul>
+                </li>
 
-            <!-- 04 METODOLOGÍAS ÁGILES -->
-            <li class="menu-item has-sub">
-                <div class="menu-link-group">
-                    <a href="agiles.html" class="menu-link">
-                        <span class="num">04</span>
-                        <span class="text">Metodologías Ágiles</span>
-                    </a>
-                    <span class="arrow">⌃</span>
-                </div>
+                <!-- 06. Recursos y Aprendizaje -->
+                <li class="menu-item has-sub">
+                    <div class="menu-link-group">
+                        <a href="recursos.html" class="menu-link"><span class="num">06</span><span class="text">Recursos y aprendizaje</span></a>
+                        <span class="arrow">^</span>
+                    </div>
+                    <ul class="sub-menu level-1">
+                        <li><a href="recursos.html#glosario-section" class="sub-link">Glosario</a></li>
+                        <li><a href="recursos.html#faq-section" class="sub-link">Preguntas Frecuentes</a></li>
+                        <li><a href="recursos.html#enlaces-section" class="sub-link">Enlaces de Interés</a></li>
+                        <li><a href="recursos.html#ejercicios-section" class="sub-link">Ejercicios Prácticos</a></li>
+                    </ul>
+                </li>
 
-                <ul class="sub-menu level-1">
-                    <li><a href="agiles.html#origen" class="sub-link">SCRUM</a></li>
-                    <li><a href="agiles.html#practicas" class="sub-link">KANBAN</a></li>
-                    <li><a href="agiles.html#practicas" class="sub-link">XP</a></li>
-                </ul>
-            </li>
-
-            <!-- 05 RECURSOS Y APRENDIZAJE -->
-            <li class="menu-item">
-                <a href="herramientas.html" class="menu-link">
-                    <span class="num">05</span>
-                    <span class="text">Recursos y aprendizaje</span>
-                </a>
-            </li>
-
-            <!-- 06 NOSOTROS -->
-            <li class="menu-item">
-                <a href="nosotros.html" class="menu-link">
-                    <span class="num">06</span>
-                    <span class="text">Nosotros</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</aside>
+                <!-- 07. Nosotros y Contacto -->
+                <li class="menu-item has-sub">
+                    <div class="menu-link-group">
+                        <a href="nosotros.html" class="menu-link"><span class="num">07</span><span class="text">Nosotros y Contacto</span></a>
+                        <span class="arrow">^</span>
+                    </div>
+                    <ul class="sub-menu level-1">
+                        <li><a href="nosotros.html#nosotros-section" class="sub-link">Sobre Nosotros</a></li>
+                        <li><a href="nosotros.html#contacto-section" class="sub-link">Contacto y Feedback</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
 
     <div id="sidebar-overlay" class="sidebar-overlay"></div>
 
-    <!-- Contenido Principal: Réplica exacta del Figma -->
-    <main class="main-container">
-        <section class="hero-card" style="display: block;">
-            
-            <!-- Encabezado Principal -->
-            <h1 class="hero-title" style="font-size: 3.2rem; margin-bottom: 12px; color: #111827;">Fundamentos de Calidad</h1>
-            <p class="hero-description" style="max-width: 800px; margin-bottom: 35px; color: #1f2937;">
+    <!-- Contenido Principal en Flujo Vertical -->
+    <main class="main-container main-vertical">
+        
+        <!-- SECCIÓN 1: FUNDAMENTOS DE CALIDAD -->
+        <section id="fundamentos-section" class="hero-card-section">
+            <h1 class="section-hero-title">Fundamentos de Calidad</h1>
+            <p class="section-hero-desc">
                 Antes de medir o controlar la calidad, primero hay que entender qué se está evaluando. Este bloque introduce conceptos, métricas y estándares de referencia.
             </p>
 
-            <!-- Grilla de 2 Columnas idéntica a Figma -->
             <div class="fundamentos-grid">
-                
-                <!-- Tarjeta Izquierda: Calidad del Software -->
-                <div class="fundamentos-card">
-                    <span class="card-badge">IDEA CENTRAL</span>
-                    <h2 class="card-title">Calidad del software</h2>
-                    <p id="left-card-desc" class="card-text">
-                        La calidad no debe verse como un adorno al final del desarrollo. Comienza desde los requerimientos y continúa durante todo el ciclo del producto.
-                    </p>
+                <!-- Columna Izquierda: Idea Central Dinámica -->
+                <div class="inner-dark-card idea-central-card">
+                    <span class="card-label">IDEA CENTRAL</span>
+        
+                    <div id="content-concepto" class="idea-content active">
+                        <h2 class="card-main-title">Calidad del software</h2>
+                        <p class="card-text">
+                            La calidad no debe verse como un adorno al final del desarrollo. Comienza desde los requerimientos y continúa durante todo el ciclo del producto.
+                        </p>
+                    </div>
 
-                    <!-- Botones Pastilla en la parte inferior -->
-                    <div class="pill-group" style="margin-top: auto; padding-top: 25px;">
-                        <button class="pill-btn active" data-left="concepto">Concepto</button>
-                        <button class="pill-btn" data-left="metricas">Métricas</button>
-                        <button class="pill-btn" data-left="estandares">Estándares</button>
+                    <div id="content-metricas" class="idea-content hidden">
+                        <h2 class="card-main-title">Métricas de Calidad</h2>
+                        <p class="card-text">
+                            Permiten cuantificar aspectos clave del código y del proceso, como la densidad de defectos, la complejidad ciclomática y la cobertura de pruebas.
+                        </p>
+                    </div>
+
+                    <div id="content-estandares" class="idea-content hidden">
+                        <h2 class="card-main-title">Estándares de Calidad</h2>
+                        <p class="card-text">
+                            Establecen marcos de referencia reconocidos internacionalmente (como ISO/IEC 25000) para garantizar buenas prácticas y conformidad técnica.
+                        </p>
+                    </div>
+
+                    <div class="pills-container">
+                        <button class="pill-btn active" data-target="concepto">Concepto</button>
+                        <button class="pill-btn" data-target="metricas">Métricas</button>
+                        <button class="pill-btn" data-target="estandares">Estándares</button>
                     </div>
                 </div>
 
-                <!-- Tarjeta Derecha: Estándares ISO -->
-                <div class="fundamentos-card">
-                    
-                    <!-- Botones Pastilla en la parte superior -->
-                    <div class="pill-group" style="margin-bottom: 20px;">
-                        <button class="pill-btn active" data-iso="iso9126">ISO 9126</button>
-                        <button class="pill-btn" data-iso="iso10006">ISO 10006</button>
+                <!-- Columna Derecha: Pestañas ISO -->
+                <div class="inner-dark-card iso-card">
+                    <div class="iso-tabs">
+                        <button class="iso-tab active" data-tab="iso9126">ISO 9126</button>
+                        <button class="iso-tab" data-tab="iso10006">ISO 10006</button>
                     </div>
 
-                    <h2 id="iso-title" class="card-title">ISO 9126</h2>
-                    <p id="iso-subtitle" class="card-text">
-                        Estándar de referencia para evaluar atributos y características vinculadas a la calidad del producto de software.
-                    </p>
+                    <div id="tab-iso9126" class="iso-content active">
+                        <h2 class="iso-title">ISO 9126</h2>
+                        <p class="iso-desc">
+                            Estándar de referencia para evaluar atributos y características vinculadas a la calidad del producto de software.
+                        </p>
+                        <ul class="iso-check-list">
+                            <li><span class="check-icon">✓</span> Funcionalidad del producto</li>
+                            <li><span class="check-icon">✓</span> Fiabilidad y comportamiento</li>
+                            <li><span class="check-icon">✓</span> Facilidad de mantenimiento</li>
+                        </ul>
+                    </div>
 
-                    <!-- Lista con Checkmarks -->
-                    <ul id="iso-checklist" class="check-list">
-                        <li>
-                            <span class="check-badge">✓</span>
-                            <span>Funcionalidad del producto</span>
-                        </li>
-                        <li>
-                            <span class="check-badge">✓</span>
-                            <span>Fiabilidad y comportamiento</span>
-                        </li>
-                        <li>
-                            <span class="check-badge">✓</span>
-                            <span>Facilidad de mantenimiento</span>
-                        </li>
-                    </ul>
+                    <div id="tab-iso10006" class="iso-content hidden">
+                        <h2 class="iso-title">ISO 10006</h2>
+                        <p class="iso-desc">
+                            Guía para la gestión de la calidad en proyectos, enfocada en la eficacia de los procesos y la satisfacción del cliente.
+                        </p>
+                        <ul class="iso-check-list">
+                            <li><span class="check-icon">✓</span> Planificación del proyecto</li>
+                            <li><span class="check-icon">✓</span> Gestión de recursos y riesgos</li>
+                            <li><span class="check-icon">✓</span> Control de calidad continuo</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: TÉCNICAS DE ASEGURAMIENTO (COMPARADOR) -->
+        <section id="tecnicas-section" class="hero-card-section">
+            <h2 class="section-hero-title">Técnicas de Aseguramiento de Calidad</h2>
+            <p class="section-hero-desc">
+                Selecciona dos niveles o tipos de prueba en los menús desplegables para generar la tabla comparativa dinámica.
+            </p>
+
+            <div class="inner-dark-card selectors-card">
+                <div class="selector-group">
+                    <label for="select-a">Opción A a comparar:</label>
+                    <select id="select-a" class="custom-select">
+                        <option value="integracion" selected>Pruebas de Integración</option>
+                        <option value="unitarias">Pruebas Unitarias</option>
+                        <option value="sistema">Pruebas de Sistema</option>
+                    </select>
                 </div>
 
+                <span class="vs-badge">VS</span>
+
+                <div class="selector-group">
+                    <label for="select-b">Opción B a comparar:</label>
+                    <select id="select-b" class="custom-select">
+                        <option value="cajanegra" selected>Caja Negra</option>
+                        <option value="cajablanca">Caja Blanca</option>
+                        <option value="regresion">Pruebas de Regresión</option>
+                    </select>
+                </div>
             </div>
 
+            <div class="table-container-dark">
+                <table class="tech-compare-table">
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th id="th-op-a">Pruebas de Integración</th>
+                            <th id="th-op-b">Caja Negra</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="row-label">Categoría</td>
+                            <td id="cat-a">Nivel de Prueba</td>
+                            <td id="cat-b">Tipo / Técnica</td>
+                        </tr>
+                        <tr>
+                            <td class="row-label">Objetivo Principal</td>
+                            <td id="obj-a">Verificar las interfaces y la comunicación entre diferentes módulos o servicios interconectados.</td>
+                            <td id="obj-b">Validar entradas y salidas del software evaluando requisitos sin examinar la estructura interna.</td>
+                        </tr>
+                        <tr>
+                            <td class="row-label">Conocimiento del Código</td>
+                            <td id="code-a">Conocimiento parcial del código e interfaces de comunicación.</td>
+                            <td id="code-b">Cero conocimiento del código fuente interno.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
+
+        <!-- SECCIÓN 3: HERRAMIENTAS DE CALIDAD -->
+        <section id="herramientas-section" class="hero-card-section">
+            <h1 class="section-hero-title">Herramientas de Calidad</h1>
+            <p class="section-hero-desc">
+                Herramientas para registrar, analizar y controlar la calidad del software. Selecciona una categoría para filtrar.
+            </p>
+
+            <!-- Filtros de categoría -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="todos">Todos</button>
+                <button class="filter-btn" data-filter="bugtrackers">Bug trackers</button>
+                <button class="filter-btn" data-filter="linters">Linters</button>
+                <button class="filter-btn" data-filter="testmanagement">Test management</button>
+            </div>
+
+            <!-- Grilla de Tarjetas -->
+            <div class="tools-cards-grid">
+                <!-- Tarjeta 1: Gestión de Pruebas -->
+                <div class="inner-dark-card tool-card" data-category="testmanagement">
+                    <span class="card-label">TEST MANAGEMENT</span>
+                    <h3 class="tool-title">Gestión de pruebas</h3>
+                    <p class="tool-desc">
+                        Organización de casos de prueba, resultados y evidencias para el equipo de QA.
+                    </p>
+                    <div class="tool-pill-wrapper">
+                        <span class="pill-dark">Casos · Resultados · Evidencias</span>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2: Jira / Bugzilla -->
+                <div class="inner-dark-card tool-card" data-category="bugtrackers">
+                    <span class="card-label">BUG TRACKERS</span>
+                    <h3 class="tool-title">Jira / Bugzilla</h3>
+                    <p class="tool-desc">
+                        Registro, asignación, seguimiento y trazabilidad de incidencias y defectos.
+                    </p>
+                    <div class="tool-pill-wrapper">
+                        <span class="pill-dark">Gestión de Incidencias</span>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3: SonarQube / ESLint -->
+                <div class="inner-dark-card tool-card" data-category="linters">
+                    <span class="card-label">LINTERS</span>
+                    <h3 class="tool-title">SonarQube / ESLint</h3>
+                    <p class="tool-desc">
+                        Análisis estático de código para detectar errores de sintaxis, vulnerabilidades y deuda técnica.
+                    </p>
+                    <div class="tool-pill-wrapper">
+                        <span class="pill-dark">Análisis Estático</span>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 4: TestRail / Zephyr -->
+                <div class="inner-dark-card tool-card" data-category="testmanagement">
+                    <span class="card-label">TEST MANAGEMENT</span>
+                    <h3 class="tool-title">TestRail / Zephyr</h3>
+                    <p class="tool-desc">
+                        Gestión centralizada de ejecuciones de pruebas y métricas de cobertura.
+                    </p>
+                    <div class="tool-pill-wrapper">
+                        <span class="pill-dark">Métricas QA</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- Pie de Página -->

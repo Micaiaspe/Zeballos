@@ -1,126 +1,270 @@
 /* ===================================================
-   ESTILOS EXCLUSIVOS: CICLO SDLC
+   ESTILOS ESPECÍFICOS DE PROCESOS DE DESARROLLO (SDLC)
    =================================================== */
 
-.sdlc-container {
+.main-vertical {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 40px !important;
+    align-items: stretch !important;
+    padding-bottom: 20px !important;
+}
+
+/* Tarjeta lavanda contenedora de sección */
+.hero-card-section {
+    background-color: #aa8eed;
+    border-radius: 28px;
+    padding: 40px 45px;
     width: 100%;
-    max-width: 1100px;
-    background-color: var(--color-card-bg);
-    border-radius: 24px;
-    padding: 40px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    scroll-margin-top: 90px;
 }
 
-.sdlc-container h1 {
-    font-size: 2.8rem;
+.section-hero-title {
+    font-size: 3.2rem;
     font-weight: 800;
-    color: #0f172a;
-    margin-bottom: 12px;
-}
-
-.sdlc-container p.intro {
-    font-size: 1.05rem;
-    color: #1e293b;
-    font-weight: 500;
-    margin-bottom: 30px;
-    line-height: 1.6;
-}
-
-.sdlc-comparative-box {
-    background-color: #231f33;
-    border-radius: 16px;
-    padding: 25px;
-    margin-bottom: 35px;
-}
-
-.sdlc-comparative-box h2 {
     color: #ffffff;
-    font-size: 1.5rem;
-    margin-bottom: 15px;
+    line-height: 1.1;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
 }
 
-.sdlc-grid-enfoques {
+.section-hero-desc {
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.55;
+    margin-bottom: 25px;
+    max-width: 950px;
+}
+
+/* Tarjeta interior oscura genérica */
+.inner-dark-card {
+    background-color: #251d34;
+    border-radius: 18px;
+    padding: 24px 26px;
+}
+
+/* --- ENFOQUES DE GESTIÓN --- */
+.enfoques-card {
+    margin-bottom: 25px;
+}
+
+.enfoques-main-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 18px;
+}
+
+.enfoques-grid-2 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.enfoque-col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.enfoque-title {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #bfa8e6;
+    margin-bottom: 4px;
+}
+
+.enfoque-text {
+    font-size: 0.88rem;
+    color: #d1c4e9;
+    line-height: 1.45;
+}
+
+.enfoque-text strong {
+    color: #ffffff;
+}
+
+/* --- LÍNEA DE TIEMPO VERTICAL (TIMELINE) --- */
+.timeline-section-container {
+    margin-top: 25px;
+}
+
+.timeline-main-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.timeline-wrapper {
+    position: relative;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
 }
 
-.enfoque-card {
-    background-color: #1a1626;
-    padding: 20px;
-    border-radius: 12px;
-    border-left: 4px solid #b095e6;
-}
-
-.enfoque-card.predictivo { border-left-color: #e74c3c; }
-.enfoque-card.evolutivo { border-left-color: #2ecc71; }
-
-.enfoque-card h3 {
-    font-size: 1.15rem;
-    margin-bottom: 10px;
-}
-
-.enfoque-card p {
-    font-size: 0.9rem;
-    color: #e2d8f5;
-    line-height: 1.5;
-}
-
-/* Timeline vertical de fases SDLC */
-.sdlc-timeline {
-    position: relative;
-    padding: 10px 0;
-    margin-top: 20px;
-}
-
-.sdlc-timeline::before {
-    content: '';
+.timeline-line {
     position: absolute;
-    top: 0;
-    left: 20px;
-    height: 100%;
-    width: 4px;
-    background-color: #685383;
+    left: 8px;
+    top: 10px;
+    bottom: 10px;
+    width: 3px;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.timeline-item {
+    position: relative;
+}
+
+.timeline-node {
+    position: absolute;
+    left: -26px;
+    top: 24px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #aa8eed;
+    border: 3px solid #251d34;
 }
 
 .timeline-card {
-    position: relative;
-    margin-left: 50px;
-    margin-bottom: 25px;
-    background-color: #231f33;
-    padding: 20px 25px;
-    border-radius: 14px;
-    border-left: 4px solid #b095e6;
+    background-color: #251d34;
+    border-radius: 16px;
+    padding: 22px 24px;
 }
 
-.timeline-card::before {
-    content: '';
-    position: absolute;
-    left: -39px;
-    top: 22px;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background-color: #b095e6;
-    border: 3px solid #161320;
-}
-
-.timeline-card .stage-tag {
-    font-size: 0.75rem;
+.card-label {
+    font-size: 0.7rem;
     font-weight: 800;
-    color: #b095e6;
+    letter-spacing: 1.2px;
+    color: #bfa8e6;
+    margin-bottom: 8px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    display: block;
 }
 
-.timeline-card h3 {
-    font-size: 1.3rem;
+.card-item-title {
+    font-size: 1.35rem;
+    font-weight: 800;
     color: #ffffff;
-    margin: 4px 0 8px 0;
+    margin-bottom: 8px;
 }
 
-.timeline-card p {
-    font-size: 0.95rem;
-    color: #e2d8f5;
+.card-item-desc {
+    color: #d1c4e9;
+    font-size: 0.9rem;
     line-height: 1.5;
+}
+
+/* --- MODELOS TRADICIONALES (PESTAÑAS) --- */
+.model-tabs-container {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.model-tab-btn {
+    background-color: #1a1426;
+    color: #ffffff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 20px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, outline 0.2s ease;
+}
+
+.model-tab-btn:hover {
+    background-color: #312646;
+}
+
+.model-tab-btn.active {
+    background-color: #1a1426;
+    outline: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.model-content-block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.model-subtitle {
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.model-subdesc {
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 0.98rem;
+    line-height: 1.55;
+    margin-bottom: 5px;
+}
+
+.model-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.border-green {
+    border-left: 5px solid #2ecc71;
+}
+
+.border-red {
+    border-left: 5px solid #e74c3c;
+}
+
+.card-box-title {
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 14px;
+}
+
+.text-green { color: #2ecc71; }
+.text-red { color: #e74c3c; }
+
+.model-list {
+    list-style: disc;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #d1c4e9;
+    font-size: 0.9rem;
+    line-height: 1.45;
+}
+
+.use-case-card {
+    background-color: #251d34;
+}
+
+.use-case-text {
+    color: #d1c4e9;
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Responsividad */
+@media (max-width: 850px) {
+    .enfoques-grid-2,
+    .model-grid-2 {
+        grid-template-columns: 1fr;
+    }
+    .hero-card-section {
+        padding: 25px 20px;
+    }
+    .section-hero-title {
+        font-size: 2.2rem;
+    }
 }

@@ -1,158 +1,474 @@
 /* ===================================================
-   ESTILOS EXCLUSIVOS: METODOLOGÍAS ÁGILES (ESTILO FIGMA)
+   ESTILOS ESPECÍFICOS DE METODOLOGÍAS ÁGILES
    =================================================== */
 
-.hero-title {
-    font-size: 3rem;
+.main-vertical {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 40px !important;
+    align-items: stretch !important;
+    padding-bottom: 20px !important;
+}
+
+.hero-card-section {
+    background-color: #aa8eed;
+    border-radius: 28px;
+    padding: 40px 45px;
+    width: 100%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    scroll-margin-top: 90px;
+}
+
+.section-hero-title {
+    font-size: 3.2rem;
     font-weight: 800;
-    color: #0f172a;
+    color: #ffffff;
+    line-height: 1.1;
     margin-bottom: 12px;
+    letter-spacing: -0.5px;
 }
 
-.hero-description {
+.section-hero-desc {
     font-size: 1.05rem;
-    color: #1e293b;
-    font-weight: 500;
-    max-width: 850px;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.55;
     margin-bottom: 25px;
-    line-height: 1.6;
+    max-width: 950px;
 }
 
-/* Menú de navegación en pastillas */
-.agile-pills-nav {
+/* Píldoras de navegación rápida superior */
+.agile-filter-pills {
     display: flex;
     gap: 10px;
-    flex-wrap: wrap;
     margin-bottom: 30px;
+    flex-wrap: wrap;
 }
 
-.pill-nav-btn {
-    background-color: #231f33;
+.agile-pill-btn {
+    background-color: #1a1426;
     color: #ffffff;
+    text-decoration: none;
     padding: 8px 18px;
     border-radius: 20px;
-    text-decoration: none;
-    font-size: 0.88rem;
-    font-weight: 600;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    transition: all 0.2s ease;
-}
-
-.pill-nav-btn:hover {
-    background-color: #685383;
-    border-color: #b095e6;
-    transform: translateY(-2px);
-}
-
-/* Tarjetas principales de secciones */
-.agile-card {
-    background-color: #231f33;
-    border-radius: 18px;
-    padding: 28px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.agile-card .card-badge {
-    font-size: 0.75rem;
-    font-weight: 800;
-    color: #b095e6;
-    letter-spacing: 1px;
-    display: block;
-    margin-bottom: 8px;
-}
-
-.agile-card h2 {
-    color: #ffffff;
-    font-size: 1.8rem;
+    font-size: 0.82rem;
     font-weight: 700;
+    transition: background-color 0.2s ease, outline 0.2s ease;
+}
+
+.agile-pill-btn:hover {
+    background-color: #312646;
+}
+
+.agile-pill-btn.active {
+    outline: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Tarjetas interiores oscuras */
+.inner-dark-card {
+    background-color: #251d34;
+    border-radius: 18px;
+    padding: 26px 24px;
+}
+
+.agile-block-card {
+    margin-bottom: 25px;
+}
+
+.card-label {
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    color: #bfa8e6;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    display: block;
+}
+
+.card-box-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #ffffff;
     margin-bottom: 12px;
 }
 
-.agile-card p {
-    color: #f1f5f9;
-    font-size: 0.98rem;
-    line-height: 1.6;
-}
-
-.card-subtitle {
+.card-desc {
     color: #d1c4e9;
+    font-size: 0.92rem;
+    line-height: 1.55;
     margin-bottom: 15px;
-    font-size: 0.95rem;
 }
 
-/* Lista numerada de Valores Ágiles */
-.valores-list {
+/* Listas ordenadas y con viñetas */
+.agile-numbered-list,
+.agile-bullet-list {
     padding-left: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
-}
-
-.valores-list li {
-    color: #f1f5f9;
-    font-size: 0.98rem;
+    color: #d1c4e9;
+    font-size: 0.9rem;
     line-height: 1.5;
 }
 
-.valores-list strong {
+.text-green {
     color: #2ecc71;
 }
 
-/* Listas con viñetas */
-.agile-bullet-list {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.agile-bullet-list li {
-    position: relative;
-    padding-left: 22px;
-    color: #f1f5f9;
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-.agile-bullet-list li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #b095e6;
-    font-size: 1.4rem;
-    line-height: 1;
-}
-
-.agile-bullet-list strong {
-    color: #ffffff;
-}
-
-/* Grilla para sub-elementos (Roles y Prácticas) */
-.grid-subcards {
+/* Grillas internas para Roles y Prácticas */
+.roles-grid-3,
+.practices-grid-3 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 16px;
     margin-top: 15px;
 }
 
-.sub-item-card {
-    background-color: #1a1626;
-    padding: 18px;
-    border-radius: 12px;
-    border-left: 4px solid #b095e6;
+.role-card-inner {
+    background-color: #1a1426;
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
-.sub-item-card h3 {
-    color: #ffffff;
+.role-title {
     font-size: 1.05rem;
-    font-weight: 700;
-    margin-bottom: 8px;
+    font-weight: 800;
+    color: #ffffff;
 }
 
-.sub-item-card p {
+.role-desc {
+    font-size: 0.85rem;
     color: #d1c4e9;
+    line-height: 1.45;
+}
+
+.full-width-practice {
+    grid-column: 1 / -1;
+}
+
+/* Esquemas visuales */
+.schemas-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.schema-box {
+    background-color: #1a1426;
+    border-radius: 14px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.schema-img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.schema-caption {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* Responsividad */
+@media (max-width: 992px) {
+    .roles-grid-3,
+    .practices-grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .full-width-practice {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .roles-grid-3,
+    .practices-grid-3,
+    .schemas-grid-2 {
+        grid-template-columns: 1fr;
+    }
+    .full-width-practice {
+        grid-column: 1;
+    }
+    .hero-card-section {
+        padding: 25px 20px;
+    }
+    .section-hero-title {
+        font-size: 2.2rem;
+    }
+}
+
+/* ===================================================
+   CORRECCIÓN DE GRILLAS Y TABLERO KANBAN
+   =================================================== */
+
+.kanban-pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.kanban-board-sim {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 15px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.kanban-col {
+    background-color: #251d34;
+    border-radius: 14px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 280px;
+}
+
+.kanban-col-header {
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: #aa8eed;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 8px;
+}
+
+.wip-badge {
+    background-color: #1a1426;
+    color: #ffffff;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.75rem;
+}
+
+.kanban-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.kanban-task-card {
+    background-color: #1a1426;
+    border-radius: 10px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    border-left: 4px solid #aa8eed;
+}
+
+.kanban-task-card strong {
+    color: #ffffff;
+    font-size: 0.85rem;
+}
+
+.kanban-task-card p {
+    color: #d1c4e9;
+    font-size: 0.78rem;
+    line-height: 1.3;
+}
+
+.kanban-move-btn {
+    background-color: #aa8eed;
+    color: #171226;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    cursor: pointer;
+    align-self: flex-start;
+    margin-top: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.kanban-move-btn:hover {
+    background-color: #c9b4f5;
+}
+
+@media (max-width: 992px) {
+    .kanban-pillars-grid,
+    .kanban-board-sim {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+.scrum-tabs-nav {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.scrum-pill-tab {
+    background-color: #1a1426;
+    color: #ffffff;
+    border: none;
+    padding: 9px 20px;
+    border-radius: 20px;
     font-size: 0.88rem;
-    line-height: 1.5;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, outline 0.2s ease;
+}
+
+.scrum-pill-tab:hover {
+    background-color: #312646;
+}
+
+.scrum-pill-tab.active {
+    background-color: #1a1426;
+    outline: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.scrum-tab-panel.hidden {
+    display: none !important;
+}
+
+.event-detail-box.hidden {
+    display: none !important;
+}
+
+.event-sub-btn {
+    background-color: #1a1426;
+    color: #ffffff;
+    border: none;
+    padding: 7px 16px;
+    border-radius: 16px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, outline 0.2s ease;
+}
+
+.event-sub-btn:hover {
+    background-color: #312646;
+}
+
+.event-sub-btn.active {
+    background-color: #1a1426;
+    outline: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.clickable-schema {
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.clickable-schema:hover {
+    transform: translateY(-3px);
+    background-color: #251d34 !important;
+}
+
+.schema-preview-placeholder {
+    width: 100%;
+    height: 120px;
+    background-color: #1a1426;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 2px dashed rgba(170, 142, 237, 0.4);
+}
+
+.schema-icon {
+    font-size: 1.8rem;
+}
+
+.schema-preview-text {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #bfa8e6;
+}
+
+.schema-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 11, 24, 0.9);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.schema-modal-overlay.hidden {
+    display: none !important;
+}
+
+.schema-modal-content {
+    background-color: #251d34;
+    border-radius: 20px;
+    padding: 30px;
+    width: 90%;
+    max-width: 900px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(170, 142, 237, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal-close-x {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 2.2rem;
+    cursor: pointer;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.modal-close-x:hover {
+    color: #aa8eed;
+}
+
+.modal-title-text {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.modal-img-container {
+    width: 100%;
+    max-height: 75vh;
+    background-color: #1a1426;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.modal-zoomed-img {
+    max-width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    border-radius: 8px;
 }

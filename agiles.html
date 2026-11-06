@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metodologías Ágiles - SGCS</title>
-    <link rel="stylesheet" href="CSS/styles.css">
+    <title>Metodologías Ágiles - Éxtasis de Calidad</title>
+    <link rel="stylesheet" href="CSS/base.css">
     <link rel="stylesheet" href="CSS/agiles.css">
 </head>
 <body>
@@ -12,164 +12,176 @@
     <!-- Header / Navbar -->
     <header class="navbar">
         <div class="navbar-logo">
-            <span class="logo-icon"></span>
-            <span class="logo-title">Calidad de Software</span>
+            <a href="index.html" class="logo-link">
+                <img src="img/logo-extasis.jpeg" alt="Logo Éxtasis de Calidad" class="site-logo-img">
+            </a>
+            <span class="brand-title">Calidad de Software</span>
         </div>
         <button id="menu-toggle" class="menu-toggle-btn" aria-label="Abrir menú">☰</button>
     </header>
 
-<!-- Menú Lateral -->
-<aside id="sidebar-menu" class="sidebar">
-    <div class="sidebar-header">
-        <h3>Navegación</h3>
-        <button id="menu-close" class="close-btn" aria-label="Cerrar menú">&times;</button>
-    </div>
+    <!-- Menú Lateral Maestro (7 Páginas) -->
+    <aside id="sidebar-menu" class="sidebar">
+        <div class="sidebar-header">
+            <h3>Navegación del Sitio</h3>
+            <button id="menu-close" class="close-btn" aria-label="Cerrar menú">&times;</button>
+        </div>
 
-    <nav class="sidebar-nav">
-        <ul class="menu-list">
-            <!-- 01 INICIO -->
-            <li class="menu-item">
-                <a href="index.html" class="menu-link">
-                    <span class="num">01</span>
-                    <span class="text">Inicio</span>
-                </a>
-            </li>
+        <nav class="sidebar-nav">
+            <ul class="menu-list">
+                <!-- 01. Inicio -->
+                <li class="menu-item">
+                    <a href="index.html" class="menu-link"><span class="num">01</span><span class="text">Inicio</span></a>
+                </li>
 
-            <!-- 02 GESTIÓN DE CALIDAD -->
-            <li class="menu-item has-sub">
-                <div class="menu-link-group">
-                    <a href="fundamentos.html" class="menu-link">
-                        <span class="num">02</span>
-                        <span class="text">Gestión de Calidad</span>
-                    </a>
-                    <span class="arrow">⌃</span>
-                </div>
+                <!-- 02. Gestión de Calidad -->
+                <li class="menu-item has-sub">
+                    <div class="menu-link-group">
+                        <a href="fundamentos.html" class="menu-link"><span class="num">02</span><span class="text">Gestión de Calidad</span></a>
+                        <span class="arrow">^</span>
+                    </div>
+                    <ul class="sub-menu level-1">
+                        <li><a href="fundamentos.html#fundamentos-section" class="sub-link">Fundamentos de calidad</a></li>
+                        <li><a href="fundamentos.html#tecnicas-section" class="sub-link">Técnicas de aseguramiento</a></li>
+                        <li><a href="fundamentos.html#herramientas-section" class="sub-link">Herramientas de calidad</a></li>
+                    </ul>
+                </li>
 
-                <ul class="sub-menu level-1">
-                    <li><a href="fundamentos.html" class="sub-link">Fundamentos de calidad</a></li>
-                    <li><a href="tecnicas.html" class="sub-link">Técnicas de aseguramiento</a></li>
-                    <li><a href="herramientas.html" class="sub-link">Herramientas de calidad</a></li>
-                </ul>
-            </li>
+                <!-- 03. Procesos de Desarrollo -->
+                <li class="menu-item has-sub">
+                    <div class="menu-link-group">
+                        <a href="sdlc.html" class="menu-link"><span class="num">03</span><span class="text">Procesos de desarrollo</span></a>
+                        <span class="arrow">^</span>
+                    </div>
+                    <ul class="sub-menu level-1">
+                        <li><a href="sdlc.html#sdlc-section" class="sub-link">Ciclo de vida (SDLC)</a></li>
+                        <li><a href="sdlc.html#modelos-section" class="sub-link">Modelos de desarrollo</a></li>
+                    </ul>
+                </li>
 
-            <!-- 03 PROCESOS DE DESARROLLO -->
-            <li class="menu-item has-sub">
-                <div class="menu-link-group">
-                    <a href="sdlc.html" class="menu-link">
-                        <span class="num">03</span>
-                        <span class="text">Procesos de desarrollo</span>
-                    </a>
-                    <span class="arrow">⌃</span>
-                </div>
+                <!-- 04. Metodologías Ágiles -->
+                <li class="menu-item has-sub">
+                    <div class="menu-link-group">
+                        <a href="agiles.html" class="menu-link"><span class="num">04</span><span class="text">Metodologías Ágiles</span></a>
+                        <span class="arrow">^</span>
+                    </div>
+                    <ul class="sub-menu level-1">
+                        <li><a href="agiles.html#agiles-section" class="sub-link">Panorama General & XP</a></li>
+                        <li><a href="agiles.html#scrum-section" class="sub-link">Scrum Profundo</a></li>
+                        <li><a href="agiles.html#kanban-section" class="sub-link">Kanban Profundo</a></li>
+                    </ul>
+                </li>
 
-                <ul class="sub-menu level-1">
-                    <li><a href="sdlc.html" class="sub-link">Ciclo de vida</a></li>
-                    <li><a href="modelos.html" class="sub-link">Modelos de desarrollo</a></li>
-                </ul>
-            </li>
+                <!-- 05. Herramientas de Calidad -->
+                <li class="menu-item has-sub">
+                    <div class="menu-link-group">
+                        <a href="herramientas.html" class="menu-link"><span class="num">05</span><span class="text">Herramientas de Calidad</span></a>
+                        <span class="arrow">^</span>
+                    </div>
+                    <ul class="sub-menu level-1">
+                        <li><a href="herramientas.html#comparador-section" class="sub-link">Comparador Interactivo</a></li>
+                        <li><a href="herramientas.html#encuesta-agil-section" class="sub-link">Encuesta de Preferencias</a></li>
+                    </ul>
+                </li>
 
-            <!-- 04 METODOLOGÍAS ÁGILES -->
-            <li class="menu-item has-sub">
-                <div class="menu-link-group">
-                    <a href="agiles.html" class="menu-link">
-                        <span class="num">04</span>
-                        <span class="text">Metodologías Ágiles</span>
-                    </a>
-                    <span class="arrow">⌃</span>
-                </div>
+                <!-- 06. Recursos y Aprendizaje -->
+                <li class="menu-item has-sub">
+                    <div class="menu-link-group">
+                        <a href="recursos.html" class="menu-link"><span class="num">06</span><span class="text">Recursos y aprendizaje</span></a>
+                        <span class="arrow">^</span>
+                    </div>
+                    <ul class="sub-menu level-1">
+                        <li><a href="recursos.html#glosario-section" class="sub-link">Glosario</a></li>
+                        <li><a href="recursos.html#faq-section" class="sub-link">Preguntas Frecuentes</a></li>
+                        <li><a href="recursos.html#enlaces-section" class="sub-link">Enlaces de Interés</a></li>
+                        <li><a href="recursos.html#ejercicios-section" class="sub-link">Ejercicios Prácticos</a></li>
+                    </ul>
+                </li>
 
-                <ul class="sub-menu level-1">
-                    <li><a href="agiles.html#origen" class="sub-link">SCRUM</a></li>
-                    <li><a href="agiles.html#practicas" class="sub-link">KANBAN</a></li>
-                    <li><a href="agiles.html#practicas" class="sub-link">XP</a></li>
-                </ul>
-            </li>
-
-            <!-- 05 RECURSOS Y APRENDIZAJE -->
-            <li class="menu-item">
-                <a href="herramientas.html" class="menu-link">
-                    <span class="num">05</span>
-                    <span class="text">Recursos y aprendizaje</span>
-                </a>
-            </li>
-
-            <!-- 06 NOSOTROS -->
-            <li class="menu-item">
-                <a href="nosotros.html" class="menu-link">
-                    <span class="num">06</span>
-                    <span class="text">Nosotros</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</aside>
+                <!-- 07. Nosotros y Contacto -->
+                <li class="menu-item has-sub">
+                    <div class="menu-link-group">
+                        <a href="nosotros.html" class="menu-link"><span class="num">07</span><span class="text">Nosotros y Contacto</span></a>
+                        <span class="arrow">^</span>
+                    </div>
+                    <ul class="sub-menu level-1">
+                        <li><a href="nosotros.html#nosotros-section" class="sub-link">Sobre Nosotros</a></li>
+                        <li><a href="nosotros.html#contacto-section" class="sub-link">Contacto y Feedback</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
 
     <div id="sidebar-overlay" class="sidebar-overlay"></div>
 
-    <!-- Contenido Principal -->
-    <main class="main-container">
-        <section class="hero-card">
-            <h1 class="hero-title">Metodologías Ágiles y Marco Scrum</h1>
-            <p class="hero-description">
+    <!-- Contenedor Principal en Flujo Vertical (Long Scroll Unificado) -->
+    <main class="main-container main-vertical">
+        
+        <!-- ===================================================
+             BLOQUE 1: PANORAMA ÁGIL Y SCRUM BÁSICO
+             =================================================== -->
+        <section id="agiles-section" class="hero-card-section">
+            <h1 class="section-hero-title">Metodologías Ágiles y Marco Scrum</h1>
+            <p class="section-hero-desc">
                 Modelos de gestión evolutiva basados en el conocimiento tácito de las personas, entregas frecuentes e incrementales y adaptabilidad continua al cambio.
             </p>
 
-            <!-- Menú Rápido con Píldoras/Pastillas -->
-            <div class="agile-pills-nav">
-                <a href="#manifiesto" class="pill-nav-btn">Valores Ágiles</a>
-                <a href="#origen" class="pill-nav-btn">Naturaleza Scrum</a>
-                <a href="#roles" class="pill-nav-btn">Roles</a>
-                <a href="#artefactos" class="pill-nav-btn">Artefactos</a>
-                <a href="#eventos" class="pill-nav-btn">Eventos</a>
-                <a href="#practicas" class="pill-nav-btn">Prácticas</a>
+            <div class="agile-filter-pills">
+                <a href="#agiles-section" class="agile-pill-btn active">Valores Ágiles</a>
+                <a href="#naturaleza-scrum" class="agile-pill-btn">Naturaleza Scrum</a>
+                <a href="#roles-scrum" class="agile-pill-btn">Roles</a>
+                <a href="#artefactos-scrum" class="agile-pill-btn">Artefactos</a>
+                <a href="#eventos-scrum" class="agile-pill-btn">Eventos</a>
+                <a href="#practicas-scrum" class="agile-pill-btn">Prácticas</a>
             </div>
 
-            <!-- 1. Los 4 Valores del Manifiesto Ágil -->
-            <div id="manifiesto" class="agile-card">
-                <span class="card-badge">MANIFIESTO ÁGIL (2001)</span>
-                <h2>Los 4 Valores Fundamentales</h2>
-                <p class="card-subtitle">Surgieron como antítesis a los modelos de ingeniería de software rígidos y predictivos:</p>
-                <ol class="valores-list">
-                    <li><strong>A los individuos y su interacción</strong> por encima de los procesos y las herramientas.</li>
-                    <li><strong>El software que funciona</strong> por encima de la documentación exhaustiva.</li>
-                    <li><strong>La colaboración con el cliente</strong> por encima de la negociación contractual.</li>
-                    <li><strong>La respuesta al cambio</strong> por encima del seguimiento de un plan.</li>
+            <!-- Manifiesto Ágil: 4 Valores -->
+            <div class="inner-dark-card agile-block-card">
+                <span class="card-label">MANIFIESTO ÁGIL (2001)</span>
+                <h3 class="card-box-title">Los 4 Valores Fundamentales</h3>
+                <p class="card-desc">Surgieron como antítesis a los modelos de ingeniería de software rígidos y predictivos:</p>
+                <ol class="agile-numbered-list">
+                    <li><strong class="text-green">A los individuos y su interacción</strong> por encima de los procesos y las herramientas.</li>
+                    <li><strong class="text-green">El software que funciona</strong> por encima de la documentación exhaustiva.</li>
+                    <li><strong class="text-green">La colaboración con el cliente</strong> por encima de la negociación contractual.</li>
+                    <li><strong class="text-green">La respuesta al cambio</strong> por encima del seguimiento de un plan.</li>
                 </ol>
             </div>
 
-            <!-- 2. Origen y Naturaleza -->
-            <div id="origen" class="agile-card">
-                <span class="card-badge">MARCO DE TRABAJO</span>
-                <h2>Origen y Naturaleza de Scrum</h2>
-                <p>
+            <!-- Naturaleza de Scrum -->
+            <div id="naturaleza-scrum" class="inner-dark-card agile-block-card">
+                <span class="card-label">MARCO DE TRABAJO</span>
+                <h3 class="card-box-title">Origen y Naturaleza de Scrum</h3>
+                <p class="card-desc">
                     Scrum se caracteriza por el desarrollo incremental (iterativo o continuo), el solapamiento de fases de trabajo y por basar la calidad en el talento y la creatividad del equipo autogestionado.
                 </p>
             </div>
 
-            <!-- 3. Roles del Equipo Scrum -->
-            <div id="roles" class="agile-card">
-                <span class="card-badge">ORGANIZACIÓN</span>
-                <h2>Roles del Equipo Scrum</h2>
-                <div class="grid-subcards">
-                    <div class="sub-item-card">
-                        <h3>Propietario del Producto (Product Owner)</h3>
-                        <p>Representa la voz del cliente, gestiona y prioriza la Pila del Producto (Product Backlog) y responde por el valor final entregado.</p>
+            <!-- Roles del Equipo Scrum -->
+            <div id="roles-scrum" class="inner-dark-card agile-block-card">
+                <span class="card-label">ORGANIZACIÓN</span>
+                <h3 class="card-box-title">Roles del Equipo Scrum</h3>
+                <div class="roles-grid-3">
+                    <div class="role-card-inner">
+                        <h4 class="role-title">Propietario del Producto (Product Owner)</h4>
+                        <p class="role-desc">Representa la voz del cliente, gestiona y prioriza la Pila del Producto (Product Backlog) y responde por el valor final entregado.</p>
                     </div>
-                    <div class="sub-item-card">
-                        <h3>Desarrolladores (3 a 9 miembros)</h3>
-                        <p>Profesionales multifuncionales y autogestionados que construyen el incremento del producto de forma conjunta y solidaria.</p>
+                    <div class="role-card-inner">
+                        <h4 class="role-title">Desarrolladores (3 a 9 miembros)</h4>
+                        <p class="role-desc">Profesionales multifuncionales y autogestionados que construyen el incremento del producto de forma conjunta y solidaria.</p>
                     </div>
-                    <div class="sub-item-card">
-                        <h3>Scrum Master</h3>
-                        <p>Responsable del cumplimiento y facilitación del marco Scrum, asesora al equipo y elimina los impedimentos que frenan el avance.</p>
+                    <div class="role-card-inner">
+                        <h4 class="role-title">Scrum Master</h4>
+                        <p class="role-desc">Responsable del cumplimiento y facilitación del marco Scrum, asesora al equipo y elimina los impedimentos que frenan el avance.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- 4. Artefactos Principales -->
-            <div id="artefactos" class="agile-card">
-                <span class="card-badge">ENTREGABLES</span>
-                <h2>Artefactos Principales</h2>
+            <!-- Artefactos Principales -->
+            <div id="artefactos-scrum" class="inner-dark-card agile-block-card">
+                <span class="card-label">ENTREGABLES</span>
+                <h3 class="card-box-title">Artefactos Principales</h3>
                 <ul class="agile-bullet-list">
                     <li><strong>Pila del Producto (Product Backlog):</strong> Lista dinámica y viva de requisitos e historias de usuario priorizadas según su valor de negocio.</li>
                     <li><strong>Pila del Sprint (Sprint Backlog):</strong> Conjunto de historias y tareas seleccionadas por los desarrolladores para ser ejecutadas en la iteración actual.</li>
@@ -177,10 +189,10 @@
                 </ul>
             </div>
 
-            <!-- 5. Eventos del Ciclo de Trabajo -->
-            <div id="eventos" class="agile-card">
-                <span class="card-badge">RITMO DE TRABAJO</span>
-                <h2>Eventos (Ciclo de Trabajo)</h2>
+            <!-- Eventos (Ciclo de Trabajo) -->
+            <div id="eventos-scrum" class="inner-dark-card agile-block-card">
+                <span class="card-label">RITMO DE TRABAJO</span>
+                <h3 class="card-box-title">Eventos (Ciclo de Trabajo)</h3>
                 <ul class="agile-bullet-list">
                     <li><strong>Sprint:</strong> Ciclo básico de desarrollo de duración fija (timeboxing, entre 1 y 4 semanas).</li>
                     <li><strong>Planificación del Sprint:</strong> Reunión inicial para definir el objetivo del Sprint y descomponer los requisitos en tareas diarias.</li>
@@ -190,43 +202,249 @@
                 </ul>
             </div>
 
-            <!-- 6. Prácticas para Flexibilizar Scrum -->
-            <div id="practicas" class="agile-card">
-                <span class="card-badge">EXCELENCIA TÉCNICA</span>
-                <h2>Prácticas para Flexibilizar Scrum</h2>
-                <div class="grid-subcards">
-                    <div class="sub-item-card">
-                        <h3>Gráfico Burn Down</h3>
-                        <p>Visualización diaria del esfuerzo pendiente frente al tiempo restante del Sprint.</p>
+            <!-- Prácticas para Flexibilizar Scrum -->
+            <div id="practicas-scrum" class="inner-dark-card agile-block-card">
+                <span class="card-label">EXCELENCIA TÉCNICA</span>
+                <h3 class="card-box-title">Prácticas para Flexibilizar Scrum</h3>
+                <div class="practices-grid-3">
+                    <div class="role-card-inner">
+                        <h4 class="role-title">Gráfico Burn Down</h4>
+                        <p class="role-desc">Visualización diaria del esfuerzo pendiente frente al tiempo restante del Sprint.</p>
                     </div>
-                    <div class="sub-item-card">
-                        <h3>Estimación de Póquer</h3>
-                        <p>Dinámica de estimación basada en la secuencia de Fibonacci para mitigar riesgos en tareas complejas.</p>
+                    <div class="role-card-inner">
+                        <h4 class="role-title">Estimación de Póquer</h4>
+                        <p class="role-desc">Dinámica de estimación basada en la secuencia de Fibonacci para mitigar riesgos en tareas complejas.</p>
                     </div>
-                    <div class="sub-item-card">
-                        <h3>Tablero Kanban</h3>
-                        <p>Gestión visual mediante columnas (Pendiente, En Curso, Hecho) limitando el trabajo en progreso (WIP).</p>
+                    <div class="role-card-inner">
+                        <h4 class="role-title">Tablero Kanban</h4>
+                        <p class="role-desc">Gestión visual mediante columnas (Pendiente, En Curso, Hecho) limitando el trabajo en progreso (WIP).</p>
                     </div>
-                    <div class="sub-item-card">
-                        <h3>Extreme Programming (XP)</h3>
-                        <p>Enfoque técnico centrado en la excelencia mediante Programación en Pareja (Pair Programming) y Desarrollo Guiado por Pruebas (TDD).</p>
+                    <div class="role-card-inner full-width-practice">
+                        <h4 class="role-title">Extreme Programming (XP)</h4>
+                        <p class="role-desc">Enfoque técnico centrado en la excelencia mediante Programación en Pareja (Pair Programming) y Desarrollo Guiado por Pruebas (TDD).</p>
                     </div>
                 </div>
             </div>
 
+            <!-- Recursos Visuales / Diagramas Interactivos -->
+            <div class="inner-dark-card agile-block-card">
+                <span class="card-label">RECURSOS VISUALES</span>
+                <h3 class="card-box-title">Esquemas y Flujos Ágiles</h3>
+                <p class="card-desc">Haz clic en cualquier diagrama para ampliarlo en pantalla completa.</p>
+                
+                <div class="schemas-grid-2">
+                    <!-- Diagrama 1: Sprint Lifecycle -->
+                    <div class="schema-box clickable-schema" data-img="img/sprint-lifecycle.png" data-title="Ciclo de vida del Sprint (Scrum)">
+                        <div class="schema-preview-placeholder">
+                            <span class="schema-icon"></span>
+                            <span class="schema-preview-text">Ver Diagrama de Scrum</span>
+                        </div>
+                        <span class="schema-caption">Ciclo de vida del Sprint (Scrum)</span>
+                    </div>
+
+                    <!-- Diagrama 2: Kanban WIP -->
+                    <div class="schema-box clickable-schema" data-img="img/kanban-wip.png" data-title="Tablero y Límite WIP (Kanban)">
+                        <div class="schema-preview-placeholder">
+                            <span class="schema-icon"></span>
+                            <span class="schema-preview-text">Ver Diagrama de Kanban</span>
+                        </div>
+                        <span class="schema-caption">Tablero y Límite WIP (Kanban)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODAL PARA AMPLIAR DIAGRAMAS EN PANTALLA COMPLETA -->
+            <div id="schema-modal" class="schema-modal-overlay hidden">
+                <div class="schema-modal-content">
+                    <button id="modal-close-btn" class="modal-close-x">&times;</button>
+                    <h3 id="modal-title" class="modal-title-text">Título del Diagrama</h3>
+                    <div class="modal-img-container">
+                        <img id="modal-img-element" src="" alt="Diagrama ampliado" class="modal-zoomed-img">
+                    </div>
+                </div>
+            </div>
         </section>
+
+
+        <!-- ===================================================
+             BLOQUE: MARCO SCRUM INMERSIÓN PROFUNDA
+             =================================================== -->
+        <section id="scrum-section" class="hero-card-section">
+            <h2 class="section-hero-title">Marco Scrum: Inmersión Profunda</h2>
+            <p class="section-hero-desc">
+                Explora los pilares fundamentales de Scrum, sus bloques temáticos y el diagrama interactivo de eventos del Sprint.
+            </p>
+
+            <!-- Botones de pestañas principales -->
+            <div class="scrum-tabs-nav">
+                <button class="scrum-pill-tab active" data-target="panel-roles">1. Roles</button>
+                <button class="scrum-pill-tab" data-target="panel-eventos">2. Eventos / Ceremonias</button>
+                <button class="scrum-pill-tab" data-target="panel-artefactos">3. Artefactos</button>
+            </div>
+
+            <!-- PANEL 1: ROLES -->
+            <div id="panel-roles" class="scrum-tab-panel">
+                <div class="inner-dark-card">
+                    <h3 class="card-box-title" style="margin-bottom: 16px;">Roles del Equipo Scrum</h3>
+                    <div class="roles-grid-3">
+                        <div class="role-card-inner">
+                            <h4 class="role-title">Product Owner</h4>
+                            <p class="role-desc"><strong>Responsabilidad:</strong> Maximizar el valor del producto y gestionar el Product Backlog. Es la voz del cliente y define las prioridades.</p>
+                        </div>
+                        <div class="role-card-inner">
+                            <h4 class="role-title">Scrum Master</h4>
+                            <p class="role-desc"><strong>Responsabilidad:</strong> Asegurar que Scrum se entienda y se aplique. Facilita los eventos y ayuda a eliminar impedimentos del equipo.</p>
+                        </div>
+                        <div class="role-card-inner">
+                            <h4 class="role-title">Developers (Desarrolladores)</h4>
+                            <p class="role-desc"><strong>Responsabilidad:</strong> Profesionales multidisciplinarios que crean el incremento de calidad en cada Sprint de forma autogestionada.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PANEL 2: EVENTOS / CEREMONIAS -->
+            <div id="panel-eventos" class="scrum-tab-panel hidden">
+                <div class="inner-dark-card">
+                    <h3 class="card-box-title" style="margin-bottom: 6px;">Cronograma Interactivo del Sprint (1 a 4 semanas)</h3>
+                    <p class="card-desc" style="margin-bottom: 15px;">Haz clic en cada evento del ciclo para consultar su objetivo sugerido y duración exacta:</p>
+                    
+                    <!-- Sub-botones interactivos de eventos -->
+                    <div class="agile-filter-pills" style="margin-bottom: 15px;">
+                        <button class="event-sub-btn active" data-event="planning">Sprint Planning</button>
+                        <button class="event-sub-btn" data-event="daily">Daily Scrum</button>
+                        <button class="event-sub-btn" data-event="review">Sprint Review</button>
+                        <button class="event-sub-btn" data-event="retro">Sprint Retrospective</button>
+                    </div>
+
+                    <!-- Caja contenedora de detalle individual -->
+                    <div class="inner-dark-card" style="background-color: #1a1426; margin-top: 10px;">
+                        <div id="event-planning" class="event-detail-box">
+                            <span class="card-label">Duración: Máximo 8 horas (para un Sprint de 4 semanas)</span>
+                            <h4 class="role-title" style="margin-top: 8px;">Planificación del Sprint (Sprint Planning)</h4>
+                            <p class="role-desc" style="margin-top: 6px;">Define el trabajo que se realizará en el Sprint. Todo el equipo colabora para establecer el Objetivo del Sprint y seleccionar las tareas del Product Backlog.</p>
+                        </div>
+                        
+                        <div id="event-daily" class="event-detail-box hidden">
+                            <span class="card-label">Duración: 15 minutos diarios</span>
+                            <h4 class="role-title" style="margin-top: 8px;">Reunión Diaria (Daily Scrum)</h4>
+                            <p class="role-desc" style="margin-top: 6px;">Sincronizar las actividades de los desarrolladores y crear un plan para las siguientes 24 horas. Se revisa el progreso hacia el Objetivo del Sprint.</p>
+                        </div>
+                        
+                        <div id="event-review" class="event-detail-box hidden">
+                            <span class="card-label">Duración: Máximo 4 horas (para un Sprint de 4 semanas)</span>
+                            <h4 class="role-title" style="margin-top: 8px;">Revisión del Sprint (Sprint Review)</h4>
+                            <p class="role-desc" style="margin-top: 6px;">Inspección del incremento de trabajo junto con los interesados (stakeholders) y adaptación del Product Backlog si es necesario.</p>
+                        </div>
+                        
+                        <div id="event-retro" class="event-detail-box hidden">
+                            <span class="card-label">Duración: Máximo 3 horas (para un Sprint de 4 semanas)</span>
+                            <h4 class="role-title" style="margin-top: 8px;">Retrospectiva del Sprint (Sprint Retrospective)</h4>
+                            <p class="role-desc" style="margin-top: 6px;">Planificar maneras de aumentar la calidad y la efectividad. El equipo analiza qué salió bien, qué falló y cómo mejorar en el próximo ciclo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PANEL 3: ARTEFACTOS -->
+            <div id="panel-artefactos" class="scrum-tab-panel hidden">
+                <div class="inner-dark-card">
+                    <h3 class="card-box-title" style="margin-bottom: 16px;">Artefactos de Scrum</h3>
+                    <div class="roles-grid-3">
+                        <div class="role-card-inner">
+                            <h4 class="role-title">Product Backlog</h4>
+                            <p class="role-desc">Lista emergente y ordenada de todo lo que se necesita en el producto. Es la única fuente de requisitos.</p>
+                        </div>
+                        <div class="role-card-inner">
+                            <h4 class="role-title">Sprint Backlog</h4>
+                            <p class="role-desc">El Objetivo del Sprint, el conjunto de elementos seleccionados para el Sprint y el plan de entrega del incremento.</p>
+                        </div>
+                        <div class="role-card-inner">
+                            <h4 class="role-title">Incremento</h4>
+                            <p class="role-desc">El escalón hacia el Objetivo del Producto. Cada incremento debe estar completamente terminado (Definition of Done).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===================================================
+             BLOQUE: GESTIÓN DE PROCESOS CON KANBAN
+             =================================================== -->
+        <section id="kanban-section" class="hero-card-section">
+            <h2 class="section-hero-title">Gestión de Procesos con Kanban</h2>
+            <p class="section-hero-desc">
+                Kanban es un método visual de gestión de flujo de trabajo que ayuda a equilibrar la demanda con la capacidad real de trabajo disponible mediante la limitación del WIP (Work in Progress).
+            </p>
+
+            <!-- Pilares de Kanban en 3 columnas -->
+            <div class="kanban-pillars-grid">
+                <div class="inner-dark-card" style="padding: 20px;">
+                    <h4 class="role-title" style="margin-bottom: 8px;">Visualizar el Flujo</h4>
+                    <p class="role-desc">Permite ver el estado de cada tarea en tiempo real a través de columnas estructuradas.</p>
+                </div>
+                <div class="inner-dark-card" style="padding: 20px;">
+                    <h4 class="role-title" style="margin-bottom: 8px;">Limitar el WIP</h4>
+                    <p class="role-desc">Evita la saturación del equipo restringiendo la cantidad de tareas simultáneas en proceso.</p>
+                </div>
+                <div class="inner-dark-card" style="padding: 20px;">
+                    <h4 class="role-title" style="margin-bottom: 8px;">Medir y Mejorar</h4>
+                    <p class="role-desc">Optimiza el tiempo de entrega midiendo cuellos de botella en el ciclo de trabajo.</p>
+                </div>
+            </div>
+
+            <!-- Simulador Interactivo de Tablero Kanban -->
+            <div class="inner-dark-card agile-block-card" style="background-color: #1a1426;">
+                <span class="card-label">SIMULADOR INTERACTIVO</span>
+                <h3 class="card-box-title">Simulador Interactivo de Tablero Kanban</h3>
+                <p class="card-desc">Mueve las tarjetas didácticas entre columnas haciendo clic en los botones de control para simular el flujo:</p>
+                
+                <div class="kanban-board-sim">
+                    <!-- Columna 1: Por Hacer -->
+                    <div class="kanban-col">
+                        <div class="kanban-col-header">Por Hacer <span id="count-todo" class="wip-badge">2</span></div>
+                        <div id="col-todo" class="kanban-cards-container">
+                            <div class="kanban-task-card" id="task-1">
+                                <strong>Redactar Casos de Prueba UAT</strong>
+                                <p>Definir escenarios de aceptación para el módulo de pagos.</p>
+                                <button class="kanban-move-btn" onclick="moveTask('task-1', 'todo', 'doing')">Avanzar →</button>
+                            </div>
+                            <div class="kanban-task-card" id="task-2">
+                                <strong>Auditoría ISO 25000</strong>
+                                <p>Revisar métricas de mantenibilidad del código fuente.</p>
+                                <button class="kanban-move-btn" onclick="moveTask('task-2', 'todo', 'doing')">Avanzar →</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Columna 2: En Proceso -->
+                    <div class="kanban-col">
+                        <div class="kanban-col-header">En Proceso (WIP: 2 máx) <span id="count-doing" class="wip-badge">0</span></div>
+                        <div id="col-doing" class="kanban-cards-container"></div>
+                    </div>
+
+                    <!-- Columna 3: Hecho -->
+                    <div class="kanban-col">
+                        <div class="kanban-col-header">Hecho <span id="count-done" class="wip-badge">0</span></div>
+                        <div id="col-done" class="kanban-cards-container"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- Pie de Página -->
     <footer class="footer-site">
         <div class="footer-simple-container">
-            <p class="footer-contact"><span class="contact-icon"></span> Contacto: <strong>@Extasiscalidad</strong></p>
+            <p class="footer-contact">Contacto: <strong>@Extasiscalidad</strong></p>
             <span class="footer-separator">•</span>
-            <p class="footer-location"><span class="location-icon"></span> Neuquén, Argentina</p>
+            <p class="footer-location">Neuquén, Argentina</p>
         </div>
     </footer>
-    <script src="JS/agiles.js"></script>
 
     <script src="JS/menu.js"></script>
+    <script src="JS/agiles.js"></script>
 </body>
 </html>
