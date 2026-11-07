@@ -139,6 +139,12 @@
                         <input type="checkbox" class="metodo-chk" value="cascada"> Cascada (Tradicional)
                     </label>
                     <label class="checkbox-label">
+                        <input type="checkbox" class="metodo-chk" value="vmodel"> Modelo en V (Tradicional)
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" class="metodo-chk" value="incremental"> Modelo Incremental (Híbrido)
+                    </label>
+                    <label class="checkbox-label">
                         <input type="checkbox" class="metodo-chk" value="xp"> XP - Extreme Programming (Ágil)
                     </label>
                 </div>
@@ -181,6 +187,14 @@
                                 <span>Fijos, estables y definidos al 100% desde el inicio por regulaciones o el cliente.</span>
                             </label>
                             <label class="survey-option-item">
+                                <input type="radio" name="p1" value="vmodel">
+                                <span>Fijos desde el inicio, pero con un fuerte enfoque en la validación y pruebas tempranas.</span>
+                            </label>
+                            <label class="survey-option-item">
+                                <input type="radio" name="p1" value="incremental">
+                                <span>Divididos en módulos o versiones funcionales que se entregan de forma progresiva.</span>
+                            </label>
+                            <label class="survey-option-item">
                                 <input type="radio" name="p1" value="scrum">
                                 <span>Evolutivos, organizados por entregas periódicas (Sprints) y priorizados constantemente.</span>
                             </label>
@@ -200,12 +214,24 @@
                                 <span>Equipos jerárquicos con roles muy separados (analistas, desarrolladores, testers).</span>
                             </label>
                             <label class="survey-option-item">
+                                <input type="radio" name="p2" value="vmodel">
+                                <span>Equipos estructurados con especial atención en el área de calidad y diseño de pruebas paralelo.</span>
+                            </label>
+                            <label class="survey-option-item">
+                                <input type="radio" name="p2" value="incremental">
+                                <span>Equipos orientados al desarrollo por bloques o partes sucesivas del sistema.</span>
+                            </label>
+                            <label class="survey-option-item">
                                 <input type="radio" name="p2" value="scrum">
                                 <span>Equipos multidisciplinarios, auto-organizados y de tamaño reducido (3 a 9 personas).</span>
                             </label>
                             <label class="survey-option-item">
                                 <input type="radio" name="p2" value="kanban">
                                 <span>Equipos enfocados en operaciones continuas o soporte con roles flexibles.</span>
+                            </label>
+                            <label class="survey-option-item">
+                                <input type="radio" name="p2" value="xp">
+                                <span>Equipos técnicos altamente colaborativos con foco en ingeniería de software y XP.</span>
                             </label>
                         </div>
                     </div>
@@ -217,6 +243,14 @@
                             <label class="survey-option-item">
                                 <input type="radio" name="p3" value="cascada">
                                 <span>Una única entrega grande al finalizar todo el desarrollo del proyecto.</span>
+                            </label>
+                            <label class="survey-option-item">
+                                <input type="radio" name="p3" value="vmodel">
+                                <span>Entrega final estructurada pero con mitigación rigurosa de errores (sistemas críticos).</span>
+                            </label>
+                            <label class="survey-option-item">
+                                <input type="radio" name="p3" value="incremental">
+                                <span>Entregas parciales por incrementos funcionales antes de tener el sistema completo.</span>
                             </label>
                             <label class="survey-option-item">
                                 <input type="radio" name="p3" value="scrum">

@@ -1,21 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 1. Lógica del Comparador Dinámico de Metodologías
+    // 1. Lógica del Comparador Dinámico de Metodologías (6 Metodologías)
     const metodologiasData = {
         scrum: {
             nombre: "Scrum",
-            enfoque: "Iterativo e Incremental (Agil)",
+            enfoque: "Iterativo e Incremental (Ágil)",
             roles: "Product Owner, Scrum Master, Developers",
             flexibilidad: "Alta (Sprints cortos)",
             documentacion: "Ligera (Product/Sprint Backlogs)",
-            ideal: "Proyectos dinamicos con alta incertidumbre"
+            ideal: "Proyectos dinámicos con alta incertidumbre"
         },
         kanban: {
             nombre: "Kanban",
-            enfoque: "Gestion de Flujo Continuo (Agil)",
+            enfoque: "Gestión de Flujo Continuo (Ágil)",
             roles: "Sin roles estrictos (Equipos autogestionados)",
             flexibilidad: "Muy Alta (Cambios continuos)",
-            documentacion: "Minima (Tablero visual y limites WIP)",
+            documentacion: "Mínima (Tablero visual y límites WIP)",
             ideal: "Mantenimiento, soporte y flujos continuos"
         },
         cascada: {
@@ -26,13 +26,29 @@ document.addEventListener('DOMContentLoaded', () => {
             documentacion: "Exhaustiva (Formal y detallada por fases)",
             ideal: "Proyectos con requisitos fijos y estables"
         },
+        vmodel: {
+            nombre: "Modelo en V",
+            enfoque: "Validación y Verificación en Paralelo (Tradicional)",
+            roles: "Project Manager, Arquitectos, Tester QA",
+            flexibilidad: "Baja a Media (Pruebas planificadas desde el inicio)",
+            documentacion: "Exhaustiva (Foco en planes de prueba por fase)",
+            ideal: "Sistemas críticos donde los errores son muy costosos"
+        },
+        incremental: {
+            nombre: "Modelo Incremental",
+            enfoque: "Entregas por partes funcionales acumulativas (Híbrido)",
+            roles: "Project Manager, Desarrolladores, Clientes",
+            flexibilidad: "Media (Permite ajustes entre incrementos)",
+            documentacion: "Moderada (Especificación por cada incremento)",
+            ideal: "Proyectos grandes donde se requiere entregar valor rápido"
+        },
         xp: {
             nombre: "XP - Extreme Programming",
-            enfoque: "Ingenieria de Software Agil",
+            enfoque: "Ingeniería de Software Ágil",
             roles: "Cliente, Desarrolladores, Coach, Tester",
-            flexibilidad: "Muy Alta (Adaptacion tecnica constante)",
-            documentacion: "Ligera (Enfoque en codigo y pruebas)",
-            ideal: "Proyectos tecnicos complejos con alta exigencia de calidad"
+            flexibilidad: "Muy Alta (Adaptación técnica constante)",
+            documentacion: "Ligera (Enfoque en código y pruebas)",
+            ideal: "Proyectos técnicos complejos con alta exigencia de calidad"
         }
     };
 
@@ -47,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .filter(chk => chk.checked)
             .map(chk => chk.value);
 
-        let headHTML = '<th>Caracteristica</th>';
+        let headHTML = '<th>Característica</th>';
         seleccionadas.forEach(key => {
             headHTML += `<th>${metodologiasData[key].nombre}</th>`;
         });
@@ -57,13 +73,13 @@ document.addEventListener('DOMContentLoaded', () => {
             { label: "Enfoque Principal", prop: "enfoque" },
             { label: "Roles Principales", prop: "roles" },
             { label: "Flexibilidad a Cambios", prop: "flexibilidad" },
-            { label: "Nivel de Documentacion", prop: "documentacion" },
+            { label: "Nivel de Documentación", prop: "documentacion" },
             { label: "Ideal Para", prop: "ideal" }
         ];
 
         let bodyHTML = '';
         if (seleccionadas.length === 0) {
-            bodyHTML = `<tr><td colspan="10" style="text-align: center; color: #bfa8e6; padding: 25px;">Selecciona al menos una metodologia arriba para ver la comparativa.</td></tr>`;
+            bodyHTML = `<tr><td colspan="10" style="text-align: center; color: #bfa8e6; padding: 25px;">Selecciona al menos una metodología arriba para ver la comparativa.</td></tr>`;
         } else {
             caracteristicas.forEach(c => {
                 bodyHTML += `<tr>`;
@@ -149,9 +165,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function calculateResult() {
         const p1Element = document.querySelector('input[name="p1"]:checked');
+        const p2Element = document.querySelector('input[name="p2"]:checked');
         const p3Element = document.querySelector('input[name="p3"]:checked');
 
         const p1 = p1Element ? p1Element.value : 'scrum';
+        const p2 = p2Element ? p2Element.value : 'scrum';
         const p3 = p3Element ? p3Element.value : 'scrum';
 
         steps.forEach(s => s.style.display = 'none');
@@ -167,10 +185,17 @@ document.addEventListener('DOMContentLoaded', () => {
         if (progressBar) progressBar.style.width = '100%';
 
         let recommendation = '';
-        if (p1 === 'cascada' || p3 === 'cascada') {
+
+        if (p1 === 'vmodel' || p3 === 'vmodel' || p2 === 'vmodel') {
+            recommendation = '<strong>Modelo en V (Tradicional):</strong> La opción ideal para tu proyecto. Permite asociar una fase de pruebas específica a cada etapa de desarrollo, perfecto para sistemas críticos donde los fallos son inaceptables.';
+        } else if (p1 === 'incremental' || p3 === 'incremental' || p2 === 'incremental') {
+            recommendation = '<strong>Modelo Incremental (Híbrido):</strong> Muy adecuado para tu proyecto. Permite construir y entregar el software por partes funcionales sucesivas, reduciendo riesgos y mostrando avances tempranos al cliente.';
+        } else if (p1 === 'cascada' || p3 === 'cascada') {
             recommendation = '<strong>Modelo en Cascada (Tradicional):</strong> Ideal para tu proyecto debido a la rigidez de los requisitos, la necesidad de control estricto por fases y entregas cerradas.';
         } else if (p1 === 'kanban' || p3 === 'kanban') {
-            recommendation = '<strong>Kanban:</strong> La opción perfecta para gestionar flujos de trabajo continuos, limitar el trabajo en proceso (WIP) y lidiar con solicitudes cambiantes.';
+            recommendation = '<strong>Kanban:</strong> La opción perfecta para gestionar flujos de trabajo continuos, limitar el trabajo en proceso (WIP) y lidiar con solicitudes cambiantes de manera ágil.';
+        } else if (p2 === 'xp') {
+            recommendation = '<strong>XP - Extreme Programming:</strong> La alternativa ideal si tu prioridad es la excelencia técnica, la calidad del código mediante pruebas rigurosas y la alta colaboración entre desarrolladores.';
         } else {
             recommendation = '<strong>Scrum:</strong> La mejor alternativa para tu desarrollo, permitiendo entregas de valor periódicas en Sprints, adaptación rápida y trabajo en equipo auto-organizado.';
         }
