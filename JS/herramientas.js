@@ -65,7 +65,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let headHTML = '<th>Característica</th>';
         seleccionadas.forEach(key => {
-            headHTML += `<th>${metodologiasData[key].nombre}</th>`;
+            if (metodologiasData[key]) {
+                headHTML += `<th>${metodologiasData[key].nombre}</th>`;
+            }
         });
         tableHeadRow.innerHTML = headHTML;
 
@@ -85,7 +87,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 bodyHTML += `<tr>`;
                 bodyHTML += `<td class="row-label">${c.label}</td>`;
                 seleccionadas.forEach(key => {
-                    bodyHTML += `<td>${metodologiasData[key][c.prop]}</td>`;
+                    if (metodologiasData[key]) {
+                        bodyHTML += `<td>${metodologiasData[key][c.prop]}</td>`;
+                    }
                 });
                 bodyHTML += `</tr>`;
             });
@@ -101,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    // 2. Lógica del Wizard de la Encuesta de Preferencias Metodológicas
+    // 2. Lógica del Wizard de la Encuesta (Corrección completa de navegación)
     let currentStep = 1;
     const totalSteps = 3;
 
@@ -114,8 +118,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const resultText = document.getElementById('survey-result-text');
 
     function updateWizard() {
+        // Asegurar que la caja de resultados esté oculta al navegar por los pasos
+        if (resultBox) resultBox.style.display = 'none';
+
         steps.forEach(step => {
-            if (parseInt(step.getAttribute('data-step')) === currentStep) {
+            const stepNum = parseInt(step.getAttribute('data-step'));
+            if (stepNum === currentStep) {
                 step.style.display = 'block';
             } else {
                 step.style.display = 'none';
@@ -126,16 +134,23 @@ document.addEventListener('DOMContentLoaded', () => {
         if (progressBar) progressBar.style.width = `${progressPercentage}%`;
         if (stepIndicator) stepIndicator.textContent = `Paso ${currentStep} de ${totalSteps}`;
 
-        if (currentStep === 1) {
-            if (prevBtn) prevBtn.style.display = 'none';
-        } else {
-            if (prevBtn) prevBtn.style.display = 'inline-block';
+        // Control del botón Anterior
+        if (prevBtn) {
+            if (currentStep === 1) {
+                prevBtn.style.display = 'none';
+            } else {
+                prevBtn.style.display = 'inline-block';
+            }
         }
 
-        if (currentStep === totalSteps) {
-            if (nextBtn) nextBtn.textContent = 'Ver Resultado';
-        } else {
-            if (nextBtn) nextBtn.textContent = 'Siguiente ->';
+        // Control del botón Siguiente / Ver Resultado
+        if (nextBtn) {
+            nextBtn.style.display = 'inline-block';
+            if (currentStep === totalSteps) {
+                nextBtn.textContent = 'Ver Resultado';
+            } else {
+                nextBtn.textContent = 'Siguiente ->';
+            }
         }
     }
 
@@ -152,12 +167,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (prevBtn) {
         prevBtn.addEventListener('click', () => {
-            if (currentStep > 1) {
+            if (resultBox && resultBox.style.display === 'block') {
+                // Si estaba en la pantalla final de resultado y toca Anterior
+                resultBox.style.display = 'none';
+                currentStep = totalSteps;
+                updateWizard();
+            } else if (currentStep > 1) {
                 currentStep--;
-                if (resultBox) resultBox.style.display = 'none';
-                steps.forEach(s => {
-                    if (parseInt(s.getAttribute('data-step')) === currentStep) s.style.display = 'block';
-                });
                 updateWizard();
             }
         });
@@ -172,12 +188,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const p2 = p2Element ? p2Element.value : 'scrum';
         const p3 = p3Element ? p3Element.value : 'scrum';
 
+        // Ocultar todos los pasos
         steps.forEach(s => s.style.display = 'none');
         
+        // Mostrar la caja de resultado
         if (resultBox) {
             resultBox.style.display = 'block';
         }
 
+        // Configurar botones en estado "Resultado"
         if (prevBtn) prevBtn.style.display = 'inline-block';
         if (nextBtn) nextBtn.style.display = 'none';
         
@@ -204,5 +223,8 @@ document.addEventListener('DOMContentLoaded', () => {
             resultText.innerHTML = recommendation;
         }
     }
+
+    // Inicialización limpia del wizard
+    updateWizard();
 
 });
